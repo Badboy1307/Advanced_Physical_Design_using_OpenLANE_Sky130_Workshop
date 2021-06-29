@@ -2,6 +2,8 @@
 
 Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop conducted by VSD-IAT.
 
+![image](https://user-images.githubusercontent.com/60011091/119861437-04d26000-bf35-11eb-9515-85b05a1788d5.png)  
+
 ![image](https://user-images.githubusercontent.com/60011091/123736349-992a3c80-d8be-11eb-8b7d-0595b9aec4ab.png)
 
 ## Day wise Workshop topics 
