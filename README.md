@@ -9,7 +9,7 @@ Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop c
 ## Day wise Workshop topics 
 
 - [Day-1 Inception of open-source EDA OpenLANE and Sky130 PDK](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-1-Inception-of-open-source-EDA-OpenLANE-and-Sky130-PDK)
-  *  [How to talk to computers](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#How to talk to computers)
+  *  [How to talk to computers](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#How-to-talk-to-computers)
   * 
   * 
   * 
