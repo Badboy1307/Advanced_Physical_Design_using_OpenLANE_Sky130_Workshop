@@ -122,7 +122,8 @@ The above image shows the Apps or Application Softwares used in our PC. These ap
 ![image](https://user-images.githubusercontent.com/60011091/123946253-9f9ede00-d9bc-11eb-88bc-de2c3e39308b.png)
 
 
-![IMG_20210629_213035](https://user-images.githubusercontent.com/60011091/123948733-6156ee00-d9bf-11eb-9b90-f296700ce610.jpg)
+![image](https://user-images.githubusercontent.com/60011091/124062338-3071ca00-da4e-11eb-990f-7f2a6a185534.png)
+
 
 The above image shows the flow of Application Software running in Hardware of Computer using System Softwares which consists of OS, Compiler and Assembler.
 
