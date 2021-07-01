@@ -295,7 +295,7 @@ OpenLane was tuned for the Skywater 130nm Open PDK. OpenLane is containerized fo
 
 It has two modes of operations ie:
 
--Autonomous -> It is a push button flow where we confure the design and run the design and obtain the final GDSII along with reports for this flow.
+-Autonomous -> It is a push button flow where we configure the design and run the design and obtain the final GDSII along with reports for this flow.
 
 -Interactive -> We run individual commands and steps one by one in an ordered fashion without skipping any step so we can do experimentation and get the idea of how our result will look like.
 
