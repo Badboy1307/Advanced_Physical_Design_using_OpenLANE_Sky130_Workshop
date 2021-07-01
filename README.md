@@ -1018,11 +1018,251 @@ This image shows the common things across all the steps in OpenLane flow.
 #### Lab For Placement
 
 
+![image](https://user-images.githubusercontent.com/60011091/124143057-6cd21400-daa8-11eb-8543-b587fa67be30.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124143198-8b380f80-daa8-11eb-8299-57dc7f9663cc.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124143309-a60a8400-daa8-11eb-90aa-f0a85a9b9072.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124143424-bb7fae00-daa8-11eb-8a60-a86e00b763e2.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124143523-d2260500-daa8-11eb-9478-ba293e33f0e5.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124143727-fda8ef80-daa8-11eb-933c-772d1de1bbed.png)
+
+
+
+
+Viewing def file of placement in picorv32a design 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124144262-6ee8a280-daa9-11eb-8d85-2d9ea7e532f5.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124144516-ae16f380-daa9-11eb-85aa-969a87911f1c.png)
+
+
+
+Magic Layout after Placement of picorv32a
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124144972-0ea63080-daaa-11eb-85a9-fe3cead024f7.png)
 
 
 
 
 
+![image](https://user-images.githubusercontent.com/60011091/124145421-680e5f80-daaa-11eb-8570-fe06d017cd33.png)
+
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124145514-7e1c2000-daaa-11eb-8fcd-e23edbdaf4ea.png)
+
+
+
+
+
+#### Cell Flow 
+
+
+
+![Cell_design_Workspace](https://user-images.githubusercontent.com/60011091/124148859-b2dda680-daad-11eb-9e66-5423b5cd0ee8.jpg)
+
+The above image shows what are the components in the Cell flow 
+
+
+The below images talk about DRC and LVS rules in a brief way 
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124149347-1f58a580-daae-11eb-9e6e-f2c99dc650f4.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124149468-3dbea100-daae-11eb-84ee-b1c39e760646.png)
+
+
+
+
+
+
+
+The below image explains about SPICE models and shows the formulated equation for Threshold Voltage Equation and for linear and saturated regions of operation for the models.
+
+
+
+![Untitled](https://user-images.githubusercontent.com/60011091/124150644-5c716780-daaf-11eb-97c5-85bb276ac718.png)
+
+
+The below images show an example of SPICE Models From Tanner EDA Tool for 0.18nm technology 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124153976-a60f8180-dab2-11eb-8e3a-a1e888e503c0.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124154041-b6276100-dab2-11eb-9fa9-f6deed66bef9.png)
+
+
+#### Design Steps
+
+-Circuit Design 
+
+In circuit design Step
+
+We take user defined specifications like cell height, supply voltage, metal layers and pin locations in this design step for cell flow 
+
+![image](https://user-images.githubusercontent.com/60011091/124155570-4023f980-dab4-11eb-982d-12a04f9ddede.png)
+
+
+The above image is an example of circuit design step where we use Euler's path concept to construct paths for the layout design.
+
+Thhe equation for the circuit is Fn= ((B+D) +(A+C) + E.F)'
+
+
+![image](https://user-images.githubusercontent.com/60011091/124156347-28994080-dab5-11eb-9564-c83ea607ead5.png)
+
+
+The above circuit show the equation for Wp/Lp / Wn/Ln ratio to set Vm which is the threshold voltage of the above circuit.
+
+
+-Layout Design 
+
+In layout design as we have mentioned in circuit design that we are using Euler's path concept to construct layout. 
+
+
+
+So below image is the example of the paths.
+
+
+![image](https://user-images.githubusercontent.com/60011091/124156740-9e9da780-dab5-11eb-84f2-598c3bc5a3f5.png)
+
+
+The below image explains the euler's path clearly. 
+
+![image](https://user-images.githubusercontent.com/60011091/124156964-df95bc00-dab5-11eb-90f5-545d22b1965a.png)
+
+
+
+-Characterization Flow 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124157458-68acf300-dab6-11eb-9a76-14d730dee38f.png)
+
+
+This schematic is for a buffer which has inverters connected back to back and this is drawn in GUNA Tool. 
+
+
+
+The below two images shows the netlist for the main circuit and subcircuit for the buffer we have taken in previous image. The third and fourth images are a model parameter file for this SPICE model.
+
+![image](https://user-images.githubusercontent.com/60011091/124157676-a6118080-dab6-11eb-8bbd-d843b819b603.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124157708-b164ac00-dab6-11eb-8567-fe08c0272f02.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124157748-bc1f4100-dab6-11eb-8940-23891c51a7a5.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124158114-2801a980-dab7-11eb-81a0-7c4953abb1b2.png)
+
+
+This GUNA softwares Takes all the files shown in this sections as inputs and generates outputs as Timing, Noise and  Power .libs.
+
+
+#### Timing Threshold Definitions
+
+Low depicts the values which are close to 0 power supply.
+
+Here in the below concepts we used red line to show inputs and blue for outputs in the graphs.
+
+
+slew_low_rise_thr- defines the point over the lower side of your power supply which is 0V. Typical value of slew_low_rise_thr is about 20% or can be 30% of bottom power supply.
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124162455-14a50d00-dabc-11eb-9337-acdb9c4ff9f0.png)
+
+The above image depicts the slew_low_rise_thr definition.
+
+
+slew_high_rise_thr- defines the point over the higher side of power supply. Typical value of slew_high_rise_thr is about 20% or can be 30% of top power supply.
+
+![image](https://user-images.githubusercontent.com/60011091/124162634-49b15f80-dabc-11eb-963c-cddd01d186ad.png)
+
+The above image depicts the slew_high_rise_thr definition.
+
+slew_low_fall_thr
+
+![image](https://user-images.githubusercontent.com/60011091/124162899-a01e9e00-dabc-11eb-8267-98140852e270.png)
+
+This images explains slew_low_fall_thr concept.
+
+
+slew_high_fall _thr
+
+![image](https://user-images.githubusercontent.com/60011091/124163078-d78d4a80-dabc-11eb-8940-63499375737b.png)
+
+This images explains slew_high_fall _thr concept. 
+
+
+
+in_rise_thr-
+
+![image](https://user-images.githubusercontent.com/60011091/124163518-479bd080-dabd-11eb-8aeb-ed08073383fc.png)
+
+This image explains in_rise_thr concept.
+ 
+
+
+in_fall_thr
+
+![image](https://user-images.githubusercontent.com/60011091/124163924-c133be80-dabd-11eb-8b17-5c6cd57259a2.png)
+
+This image explains in_faLL_thr concept.
+
+
+
+out_rise_thr
+
+
+![image](https://user-images.githubusercontent.com/60011091/124163756-892c7b80-dabd-11eb-921c-18c5876a6df0.png)
+
+This image explains out_rise_thr concept.
+
+
+out_fall_thr
+
+![image](https://user-images.githubusercontent.com/60011091/124164016-e45e6e00-dabd-11eb-8913-8b98abe9698d.png)
+
+This image explains out_fall_thr concept.
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124164482-51720380-dabe-11eb-8c1c-9cd1456de8af.png)
+
+
+The above table summarizes the concepts learn in this section all the % is taken from the VDD. in the above Table we see slew_low_rise_thr is 20% of VDD so similarly other % are taken from VDD. 
 
 
 
