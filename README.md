@@ -102,7 +102,8 @@ A mobile phone for example depends on the foundry. Foundry is like a factory wit
 Here we see about RISCV Instruction Set Architecture (ISA) which is a language of the computer and this is the way we are going to talk to a computer. 
 
 
-![image](https://user-images.githubusercontent.com/60011091/123942610-f0143c80-d9b8-11eb-8d71-cd7746a2caad.png)
+![tempsnip](https://user-images.githubusercontent.com/60011091/124063611-dde5dd00-da50-11eb-9f73-01bc2fe89c14.jpg)
+
 
 From the above image we want to pass this C program to a hardware of the above layout in a certain way or in a certain flow. This is done by  firstly compiling C in its assembly language program ie RISCV assembly language program then this assembly language is converted to machine language which is basically the binary 1s and 0s understood by the hardware of the computer.
 
