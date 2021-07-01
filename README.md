@@ -773,6 +773,257 @@ We have a lot of options and commands for Github like forking, cloning or downlo
 
 ## Day-2 Understand importance of good floorplan vs bad floorplan and introduction to library cells
 
+### Chip Floorplanning considerations
+
+
+#### Utilization Factor and Aspect Ratio
+
+
+
+
+Core is the section of the chip where the fundamental logic of the design are placed
+
+Die which consist of core is a small semiconductor material specimen on which the fundamental circuit is fabricated.
+
+
+![image](https://user-images.githubusercontent.com/60011091/124116318-75b4ec80-da8c-11eb-91b8-ee30364f44d7.png)
+
+
+-Netlist occupies the core area leading to 100% utilization.
+
+
+       Utilization Factor = Area occupied by the Netlist/ Total Area of the core 
+       
+       
+-Whenever the Utilization Factor=1, the core is fully occupied and we are not allowed to ad any extra cells in our design and the core will take square shaped structure.
+
+
+       Aspect Ration= Height/ Width
+       
+       
+-Whenever the Aspect Ratio = 1, it signifies that the chip is square shaped. But whenever the Aspect Ratio or Utilization Factor is not 1, then  the chip will take rectangular shaped structure.
+
+
+####  Preplaced Cells
+
+
+
+
+![IPs_Workspace](https://user-images.githubusercontent.com/60011091/124118719-3e940a80-da8f-11eb-8e60-e6f5b8c704b7.jpg)
+
+-The arrangement of IP's in a chip is called Floorplanning.
+
+-These IP's/blocks have user defined locations and so these are placed in chip before automated placement and routing and are called as pre-placed cells.
+
+-Automated placement and routing tools places the remaining logic cells in the design onto the chip.
+
+#### Lab for Floorplanning 
+
+##### Running floorplan in OpenLane
+
+
+Configuaration folder of OpenLane 
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124123465-fc6dc780-da94-11eb-9cbf-89a837b8e6cd.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124124108-af3e2580-da95-11eb-91ce-e1fed9c16612.png)
+
+
+README.md File
+
+![image](https://user-images.githubusercontent.com/60011091/124123717-3e970900-da95-11eb-81d3-e29abf1acbab.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124123809-5a021400-da95-11eb-9146-20f882f3036e.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124123890-6be3b700-da95-11eb-9b0e-e9b43ff35a7a.png)
+
+       
+       
+ ![image](https://user-images.githubusercontent.com/60011091/124123987-874ec200-da95-11eb-97af-612121f1eb7f.png)
+
+
+
+floorplan.tcl file 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124124208-cc72f400-da95-11eb-9b30-17a7c1cbffa4.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124124263-dbf23d00-da95-11eb-8011-107280370ef1.png)
+
+
+
+picorv32a Folder contents 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124124648-558a2b00-da96-11eb-9212-06c426f5f2b9.png)
+
+
+So the precendence is lowest prioriy is system defaults ie all the tcl files for configuration in OpenLane. The next priority is for config.tcl and the last priority is sky130A_sky130_fd_sc_hd_config.tcl.
+
+
+Config.tcl for picorv32a
+
+![image](https://user-images.githubusercontent.com/60011091/124125278-0e506a00-da97-11eb-964e-5c17675398b5.png)
+
+
+Running Floorplanning
+
+![image](https://user-images.githubusercontent.com/60011091/124125504-4b1c6100-da97-11eb-9681-a40ee2993351.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124125612-72732e00-da97-11eb-95ca-b3a678eef150.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124125673-874fc180-da97-11eb-87f0-5641a5dda44d.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124125772-9c2c5500-da97-11eb-84f6-965bdef75fcc.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124125863-b0705200-da97-11eb-88af-2619815c011d.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124125991-d3026b00-da97-11eb-9503-88f6d344b700.png)
+
+
+
+ Viewing Floorplanning files
+ 
+ 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124126385-41dfc400-da98-11eb-839a-2f7a69f4179a.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124126556-6b98eb00-da98-11eb-91db-77acfbcb009c.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124126814-abf86900-da98-11eb-8fe0-4d34d6e3ce54.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124127144-0265a780-da99-11eb-8444-c37867a1c682.png)
+
+
+Config file in the picorv32a runs folder
+
+
+![image](https://user-images.githubusercontent.com/60011091/124127322-3771fa00-da99-11eb-8902-17aa127e13f0.png)
+
+
+Picorv32a def file 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124127655-a18a9f00-da99-11eb-9bb2-ff556e21e2f2.png)
+
+
+Opening floorplan using Magic 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124128834-c7647380-da9a-11eb-8f68-5156d5c50338.png)
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124128983-f1b63100-da9a-11eb-945e-9c9f87c2be67.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124130033-fa5b3700-da9b-11eb-9c25-d650683ad128.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124130672-a866e100-da9c-11eb-8cc9-d70be38d077d.png)
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124130835-d1877180-da9c-11eb-9e50-3156e387963f.png)
+
+
+
+
+
+##### Placement and Routing 
+
+
+Libraries are like shelves which can be divided into two sub libraries like one library will have shapes and sizes informations and the other might have delay related informations. 
+
+Steps in Placement is as below 
+
+-Binding netlist with physical cell 
+
+The image below shows different flavors for same flipflop, gates and other netlists which can differ in sizes, shapes or delay relatedninformations.
+
+
+![image](https://user-images.githubusercontent.com/60011091/124132170-2972a800-da9e-11eb-8df3-4fd26444a121.png)
+
+
+-Placement 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124133881-e6b1cf80-da9f-11eb-8008-62749f4d4e14.png)
+
+
+
+-Optimize Placement 
+
+This is the stage where we estimate the wire length and capacitances so based on that we insert repeaters. As shown below:
+
+
+![image](https://user-images.githubusercontent.com/60011091/124135078-1a412980-daa1-11eb-9dc9-3718d0ea47cc.png)
+
+
+
+
+
+###### Need for libraries and characterizations
+
+
+![Common_Workspace](https://user-images.githubusercontent.com/60011091/124135847-d39fff00-daa1-11eb-8469-c4fcff2f9425.jpg)
+
+
+This image shows the common things across all the steps in OpenLane flow.
+
+
+#### Lab For Placement
+
+
+
+
+
+
+
+
 
 
 
