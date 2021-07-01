@@ -1214,7 +1214,7 @@ The above image depicts the slew_high_rise_thr definition.
 
 slew_low_fall_thr
 
-![image](https://user-images.githubusercontent.com/60011091/124162899-a01e9e00-dabc-11eb-8267-98140852e270.png)
+![image](https://user-images.githubusercontent.com/60011091/124165084-115f5080-dabf-11eb-8647-441c1a027448.png)
 
 This images explains slew_low_fall_thr concept.
 
