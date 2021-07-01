@@ -2,6 +2,7 @@
 
 Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop conducted by VSD-IAT.
 
+
 ![image](https://user-images.githubusercontent.com/60011091/119861437-04d26000-bf35-11eb-9515-85b05a1788d5.png)  
 
 ![image](https://user-images.githubusercontent.com/60011091/123736349-992a3c80-d8be-11eb-8b7d-0595b9aec4ab.png)
@@ -57,6 +58,7 @@ Here we can see an Arduino board which you might have bought from the market and
 ![image](https://user-images.githubusercontent.com/60011091/123920622-c866a980-d9a3-11eb-9ca3-e74bbe9b3422.png)
 
 
+
 This image is the block diagram of the above arduino board image and the circled part in the previous image is shown in this figure as a Processor/SOC. 
 
 
@@ -91,6 +93,8 @@ This image is the example or sample of RISCV inside a chip.
 
 ![image](https://user-images.githubusercontent.com/60011091/123939500-cf96b300-d9b5-11eb-9522-e3c244ded386.png)
 
+
+
 This image depicts which are the components present in the above image are foundry related IPs like dac adc0, adc1, pll and SRAM. 
 
 A mobile phone for example depends on the foundry. Foundry is like a factory with alot of machines where chips are manufactured.Then sir had shared his experience on working in a foundry of IIT Bombay where he and his team worked in lithography domain. As VLSI engineers our job is to continuously communicate with foundry.
@@ -100,6 +104,8 @@ A mobile phone for example depends on the foundry. Foundry is like a factory wit
 
 
 Here we see about RISCV Instruction Set Architecture (ISA) which is a language of the computer and this is the way we are going to talk to a computer. 
+
+
 
 
 ![tempsnip](https://user-images.githubusercontent.com/60011091/124063611-dde5dd00-da50-11eb-9f73-01bc2fe89c14.jpg)
@@ -117,13 +123,20 @@ There is another interface required between RISCV Architecture and the layout of
 
 ![image](https://user-images.githubusercontent.com/60011091/123945643-ffe15000-d9bb-11eb-8d78-48cefe7ba5bf.png)
 
+
+
 The above image shows the Apps or Application Softwares used in our PC. These apps run in the computer hardware shown in the below image.
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123946253-9f9ede00-d9bc-11eb-88bc-de2c3e39308b.png)
 
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124062338-3071ca00-da4e-11eb-990f-7f2a6a185534.png)
+
+
+
 
 
 The above image shows the flow of Application Software running in Hardware of Computer using System Softwares which consists of OS, Compiler and Assembler.
@@ -138,7 +151,12 @@ This lecture was given by Mohamed Shalan who talked about OpenLane and its featu
 Designing digital application specific integrated circuits (ASIC) require certain elements like RTL IP's (which is a hardware description model or functions), EDA tools and 
 Process Design Kits (PDKS). The same is shown in the image given below.
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123952883-3ae78180-d9c4-11eb-9966-17f0ab7be254.png)
+
+
+
 
 Some of the best websites to acquire RTL Designs include:
 
@@ -159,7 +177,12 @@ PDK is the interface between FAB and the designers. It includes collection of fi
 
 On June 30, 2020 Google on collaboration with skywater technology released the first open source pdk ie 130nm process skywater to the masses.
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123956209-0c6ba580-d9c8-11eb-9718-c56332c98ba1.png)
+
+
 
 
 The above image demonstrates various steps involved in EDA Tools
@@ -170,6 +193,9 @@ The above image demonstrates various steps involved in EDA Tools
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123957671-b3047600-d9c9-11eb-974e-dbd6a039eca3.png)
+
+
+
 This images shows the Simplified flow from RTL design to GDSII 
 
 ###### Synthesis
@@ -184,7 +210,10 @@ This images shows the Simplified flow from RTL design to GDSII
              
              
              
+             
 ![Flow_Workspace](https://user-images.githubusercontent.com/60011091/123964569-2bbb0080-d9d1-11eb-89bb-4908d7a07f44.jpg)
+
+
 
 
 Standard Cells have regular layout. Each has different views/models 
@@ -198,11 +227,19 @@ Standard Cells have regular layout. Each has different views/models
 
 Chip Floorplanning - Patitioning the chip die between different system blocks and placing the I/O pads
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123965874-830da080-d9d2-11eb-8801-bf2c87292754.png)
+
+
+
+
 
 The above image describes the Chip Floorplanning
 
 Macro Floorplanning - We define the macro dimensions, pin locations and row definitions.
+
+
 
 ![image](https://user-images.githubusercontent.com/60011091/123966387-03340600-d9d3-11eb-8a03-494b72f72228.png)
 
@@ -216,6 +253,10 @@ Power rings- Power ring is designed around the core. Power rings contains both V
 
 ![image](https://user-images.githubusercontent.com/60011091/123967363-ddf3c780-d9d3-11eb-8b41-6f8f8ce56882.png)
 
+
+
+
+
 This diagram shows the power planning components.
 
 These parallel structures reduce resistance. To address electromagnetism the power distribution network uses upper metal layers as they are thicker than lower metal layers
@@ -225,7 +266,12 @@ These parallel structures reduce resistance. To address electromagnetism the pow
 
 Placing the cell on the floorplan rows aligned with sites. Connected cells should be placed close to each other to reduce the interconnect delay. It is done in two steps ie Global and Detailed Placement. In global placement , the approximate locations for cells is decided by placing cells in global bins. In detailed placement, cells are Placed without over lapping.
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123968734-22339780-d9d5-11eb-89eb-0ab9dfc5aca2.png)
+
+
 
 
 
@@ -238,7 +284,12 @@ Creating a clock distribution network :
 - In Good shape 
 - A tree (H,X etc)
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123969507-eb11b600-d9d5-11eb-9a0d-affcbfc897e5.png)
+
+
+
 
 ###### Routing 
 
@@ -247,6 +298,7 @@ Implements interconnects using available metal layers. Metal tracks form a routi
 There are two types of Routing ie
 -Global routing: Generates routing guides
 -Detailed routing: Uses routing guides to implement actual wiring.
+
 
 
 
@@ -280,10 +332,19 @@ Efabless decided to create Open source ASIC implementation and flow called as Op
 
 Strive-  a family of open everything SOCs ie Open PDK, Open EDA and Open RTL.
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123983062-32517400-d9e1-11eb-8e73-354059050687.png)
 
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123989279-5f545580-d9e6-11eb-9bc1-ca51ea4ac738.png)
+
+
+
 
 
 This image shows the features of Strive SOCS and its features.
@@ -306,6 +367,10 @@ It has the feature of Design Space Exploration where we can find the best set of
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123989549-a04c6a00-d9e6-11eb-835a-48e86fb0dd8c.png)
+
+
+
+
  This image shows the OpenLane Detailed ASIC Flow
  
  This Flow is based on OpenROAD, Klayout, Yosys, Magic, Qflow, Fault and ABC etc.
@@ -313,18 +378,35 @@ It has the feature of Design Space Exploration where we can find the best set of
  
 ![image](https://user-images.githubusercontent.com/60011091/123990116-2072cf80-d9e7-11eb-99c9-9ef5d671b704.png)
 
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123990295-44361580-d9e7-11eb-969c-9eb20616da38.png)
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123990414-5dd75d00-d9e7-11eb-98bc-f0ddb3a5e7a5.png)
 
 
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123990478-6e87d300-d9e7-11eb-964c-4db4cfae505c.png)
+
+
+
 The above image is for Yosys. Yosys takes RTL code and .lib files as input and netlist as output.
 
 
+
 ![image](https://user-images.githubusercontent.com/60011091/123990753-ae4eba80-d9e7-11eb-8750-f028afe00541.png)
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123991096-084f8000-d9e8-11eb-8b6b-7763f948481e.png)
@@ -334,6 +416,9 @@ The above image is for Yosys. Yosys takes RTL code and .lib files as input and n
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123991469-60868200-d9e8-11eb-93c5-b8669fb9a2e0.png)
+
+
+
 
 
 This image shows the design exploration details such as design name,total runtime for the design flow, cell counts and other details which is tabulated for users to understand the design explorations.
@@ -347,7 +432,14 @@ We can do regression testing for these designs as well.
 
 This step is optional in OpenLane which includes scan insertions, ATPGS, Test pattern compaction, fault coverge and fault simulation. 
 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123992809-8fe9be80-d9e9-11eb-9826-68a0852fa4c9.png)
+
+
+
 
 
 ###### Logic Equivalence Circuit (LEC)
@@ -359,7 +451,12 @@ This check is used to formally confirm that the function did not change after mo
 
 This step is done to deal with antenna violations caused during reaction ion etching which causes charge to accumlate metal wires which in turn damages the transition gates.
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123994454-0509c380-d9eb-11eb-84b4-7f6ff936915c.png)
+
+
+
 
 
 
@@ -373,24 +470,45 @@ OpenLane is a flow rather than atools which comprises of many open source EDA to
 
 ![image](https://user-images.githubusercontent.com/60011091/123998643-4e5c1200-d9ef-11eb-9104-4d49016dd6a1.png)
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123998685-5a47d400-d9ef-11eb-8625-116a61713dfc.png)
+
+
+
 
 ![image](https://user-images.githubusercontent.com/60011091/123999153-d3472b80-d9ef-11eb-859e-b58fc20fe150.png)
 
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/123999377-143f4000-d9f0-11eb-9adf-a9753964dce4.png)
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123999668-654f3400-d9f0-11eb-9021-4798cf0f37c2.png)
 
 
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124000056-d393f680-d9f0-11eb-8dbd-825813730b38.png)
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124000551-53ba5c00-d9f1-11eb-8e06-02e28f538137.png)
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124000624-63d23b80-d9f1-11eb-991d-3568657f13a4.png)
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124000925-b7448980-d9f1-11eb-888a-92c6f81144ef.png)
@@ -401,7 +519,12 @@ OpenLane is a flow rather than atools which comprises of many open source EDA to
 
 Interactive flow of OpenLane 
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124001831-a8120b80-d9f2-11eb-96a9-62c6a6f48a4d.png)
+
+
+
 
                  $make mount
                  bash-4.2$ pwd
@@ -412,31 +535,72 @@ Interactive flow of OpenLane
 
 The below images shows the designs in the OpenLane design folder
 
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124002383-4b632080-d9f3-11eb-80f4-926802183ea9.png)
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124002543-81a0a000-d9f3-11eb-8a4c-666c149b8b8e.png)
 
 
+
+
 Picorv32a is the design and its contents are shown in the below images.
+
+
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124002670-a5fc7c80-d9f3-11eb-8ba1-51f17b68d317.png)
 
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124003865-05a75780-d9f5-11eb-8f97-b47eed575f61.png)
+
+
+
+
+
+
 
 
 config.tcl file for picorv32a
 
+
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124004206-6cc50c00-d9f5-11eb-9c99-50fc903e6867.png)
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124003977-31c2d880-d9f5-11eb-8659-353934a7113f.png)
 
+
+
+
+
+
+
 sky130_fd_sc_hd_config.tcl for picorv32a
 
 ![image](https://user-images.githubusercontent.com/60011091/124004461-a9910300-d9f5-11eb-8d36-dfca069981c1.png)
+
+
+
+
+
 
 
 
@@ -445,48 +609,113 @@ Preparation of design
 ![image](https://user-images.githubusercontent.com/60011091/124005058-494e9100-d9f6-11eb-8b01-30b771ae1936.png)
 
 
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124005417-aa766480-d9f6-11eb-9ee7-6c27221f4cb7.png)
+
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124005608-e90c1f00-d9f6-11eb-8add-1ff8893dc000.png)
 
 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124005933-47d19880-d9f7-11eb-8310-f08b81415611.png)
+
+
+
+
+
+
 
 merge.lef contents 
 
 ![image](https://user-images.githubusercontent.com/60011091/124006066-70599280-d9f7-11eb-83c6-1135fd4b1ac4.png)
 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124006158-8a937080-d9f7-11eb-8e36-748d512a2ca5.png)
 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124006205-967f3280-d9f7-11eb-84b8-9554af7f0e82.png)
+
+
+
+
 
 
 config.tcl in reports directory
 
 ![image](https://user-images.githubusercontent.com/60011091/124006444-e8c05380-d9f7-11eb-92ee-a14571ac505a.png)
 
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124006573-10afb700-d9f8-11eb-9418-5887c3ac7f3e.png)
+
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124006677-2c1ac200-d9f8-11eb-8ed2-140d25937fdc.png)
 
 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124006723-3b017480-d9f8-11eb-9546-16b1375e38ad.png)
+
+
+
+
+
+
 
 
 ##### Synthesizing picorv32a design reports
 
 ![image](https://user-images.githubusercontent.com/60011091/124007257-d4c92180-d9f8-11eb-9c33-f07cc0eb7b00.png)
 
+
+
+
+
+
+
 Utilization report
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124007498-0b06a100-d9f9-11eb-96a4-fe4c62f3f0ba.png)
 
+
+
+
+
+
 DFF Utilization report
 
 ![image](https://user-images.githubusercontent.com/60011091/124007742-4608d480-d9f9-11eb-893d-fcb1a169bed4.png)
+
+
+
+
 
 
 DFF Ratio
@@ -494,15 +723,34 @@ DFF Ratio
 ![image](https://user-images.githubusercontent.com/60011091/124009117-d5fb4e00-d9fa-11eb-9ed5-a797804cca5a.png)
 
 
+
+
+
+
+
+
 OPEN STA Timing report 
 
 ![image](https://user-images.githubusercontent.com/60011091/124009357-1f4b9d80-d9fb-11eb-8864-162977211f83.png)
 
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124009412-325e6d80-d9fb-11eb-8586-75454f49df34.png)
 
 
+
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124009587-6a65b080-d9fb-11eb-9488-fbad688d9eeb.png)
+
+
+
+
+
+
+
 
 
 
