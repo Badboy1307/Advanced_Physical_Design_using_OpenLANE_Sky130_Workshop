@@ -1281,6 +1281,10 @@ The above table summarizes the concepts learn in this section all the % is taken
 
 
 
+### Lab for CMOS inverter ngspice simulations
+
+
+![image](https://user-images.githubusercontent.com/60011091/124224442-47362080-db23-11eb-87c8-e6b7689c07ea.png)
 
 
 
