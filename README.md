@@ -1912,6 +1912,243 @@ The below image shows the coordinates when expanded for rise_transition time alo
 
 
 
+The track info file 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124356211-74bdbf80-dc32-11eb-888d-b4fb790e65d9.png)
+
+
+
+
+Grid info to track info
+
+    % grid 0.46um 0.34um 0.23um 0.17um      --based on the track info from sky130_fd_sc_hd library
+
+![image](https://user-images.githubusercontent.com/60011091/124356679-d8e18300-dc34-11eb-9bf8-24f744b07eca.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124356702-075f5e00-dc35-11eb-90c2-e25413a144e6.png)
+
+
+
+### Labs to convert magic layout to std cell LEF
+
+
+As an example editing of input A layer is as shown below.
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124357119-76d64d00-dc37-11eb-9817-311857ab7738.png)
+
+
+
+Saving the layout according to user's way is as shown below in the below image 
+
+![image](https://user-images.githubusercontent.com/60011091/124357545-b56d0700-dc39-11eb-9eec-b7df6c389005.png)
+
+
+Re-running magic to check whether the mag file was sucessfully saved and in working condition 
+
+![image](https://user-images.githubusercontent.com/60011091/124357628-32987c00-dc3a-11eb-80ce-ce5fdc50a2dc.png)
+
+
+Creating lef file from magic layout created in previous image
+
+       $ lef write 
+
+![image](https://user-images.githubusercontent.com/60011091/124357831-295bdf00-dc3b-11eb-8e31-e48349b89577.png)
+
+
+        $ ls -ltr
+        $ less sky130_vsdin.lef
+        
+
+![image](https://user-images.githubusercontent.com/60011091/124357793-fade0400-dc3a-11eb-8ff7-bd4b7b3769db.png)
+
+
+
+These are the images for the contents in sky130_vsdin.lef
+
+![image](https://user-images.githubusercontent.com/60011091/124357935-9a02fb80-dc3b-11eb-8b8a-b84ed74417ea.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124357958-b141e900-dc3b-11eb-8090-2af61066ae3b.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124357992-d3d40200-dc3b-11eb-88ac-6b14862b8c19.png)
+
+
+
+### Lab for introduction to timing libs and steps to include new cell in synthesis
+
+
+The below image shows the copying sky130_vsdin.lef into picorv32a design's src dirctory
+
+![image](https://user-images.githubusercontent.com/60011091/124358541-6d9cae80-dc3e-11eb-9ea4-12b9e0bda780.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124358580-9755d580-dc3e-11eb-85e7-3868012343f3.png)
+
+
+
+
+Contents in sky130_fd_sc_hd__typical.lib
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358671-f9aed600-dc3e-11eb-9131-298ca874a638.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358683-06cbc500-dc3f-11eb-84e3-6ccab7ca8610.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358693-10edc380-dc3f-11eb-9bd1-58be194791d7.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358701-1d721c00-dc3f-11eb-9063-e2473139d225.png)
+
+
+Contents in sky130_fd_sc_hd__slow.lib
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358749-53170500-dc3f-11eb-97b9-07a3a5086549.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358760-60cc8a80-dc3f-11eb-9492-3d01f0cc6869.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358769-6c1fb600-dc3f-11eb-9a4d-4b9c40691872.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124358780-75a91e00-dc3f-11eb-8b14-5e7818491343.png)
+
+
+
+The below image shows the copying sky130_fd_sc_hd__* files into picorv32a design's src dirctory
+
+![image](https://user-images.githubusercontent.com/60011091/124358876-f405c000-dc3f-11eb-9f1b-952a8841621c.png)
+
+
+Here this image shows that sky130_fd_sc_hd__* files successfully copied into picorv32a design's src dirctory
+
+![image](https://user-images.githubusercontent.com/60011091/124358895-04b63600-dc40-11eb-847c-51229c19db11.png)
+
+
+
+Here is the screenshot of modified picorv32a config.tcl file which includes sky130_fd_sc_hd__* files and sky130_vsdin.lef
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124359735-e18d8580-dc43-11eb-8167-8c56acba650b.png)
+
+
+Now we are running the openlane flow from preparation till placement for picorv32a with sky130_fd_sc_hd__* files and sky130_vsdin.lef files
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124362312-bf026900-dc51-11eb-9748-8c79d51d32b8.png)
+
+
+Preparing the design 
+
+![image](https://user-images.githubusercontent.com/60011091/124362207-37b4f580-dc51-11eb-92e3-e8e0788e8b41.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124362253-79de3700-dc51-11eb-87bc-30b75fb584a3.png)
+
+
+Performing Synthesis 
+
+![image](https://user-images.githubusercontent.com/60011091/124362416-3c2dde00-dc52-11eb-8d06-245d83147990.png)
+
+
+
+### Power Aware CTS 
+
+
+Observations:
+
+-2 levels of buffering. 
+-At every level, each node driving same load.
+-Identical buffer at same level.
+
+The example circuit is as shown below 
+
+![image](https://user-images.githubusercontent.com/60011091/124362791-cd9e4f80-dc54-11eb-801d-529677f5f7d0.png)
+
+
+
+This image shows our assumptions for the above circuit 
+![image](https://user-images.githubusercontent.com/60011091/124362847-3d143f00-dc55-11eb-8f11-5c54562fbfa1.png)
+
+
+Delay table example is as shown below 
+
+
+Delay table for CBUF 1
+
+![image](https://user-images.githubusercontent.com/60011091/124362773-a9db0980-dc54-11eb-94ea-a332a25d0cbe.png)
+
+
+Delay table for CBUF 2
+
+![image](https://user-images.githubusercontent.com/60011091/124362807-e3ac1000-dc54-11eb-8b4f-da3a88a97fa9.png)
+
+
+Based on assumption in the below image 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124362847-3d143f00-dc55-11eb-8f11-5c54562fbfa1.png)
+
+
+We round the values meeting 60ff at node A for CBUF 1
+
+![image](https://user-images.githubusercontent.com/60011091/124362874-7b116300-dc55-11eb-9357-b2636c81a592.png)
+
+We round the values meeting 50ff at node B for CBUF 2
+
+
+![image](https://user-images.githubusercontent.com/60011091/124362928-d2173800-dc55-11eb-913d-cdc62baa8f7c.png)
+
+
+We round the values meeting 50ff at node B for CBUF 2 for a different input condition 
+
+![image](https://user-images.githubusercontent.com/60011091/124362939-f115ca00-dc55-11eb-844c-31d2908cb0f6.png)
+
+
+
+### Configuring synthesis settings to fix Slack and include vsdinv
+
+README.md file for applying synthesis strategy
+
+![image](https://user-images.githubusercontent.com/60011091/124363161-4f8f7800-dc57-11eb-91f6-90fcba07b602.png)
+
+
+Setting SYNTH_STRATEGY 1
+![image](https://user-images.githubusercontent.com/60011091/124363182-7483eb00-dc57-11eb-84b7-cdadcff4f8d0.png)
+
+When we set this value as 1 where the area would would increase but the delay will decrease significantly.
+
+
+
+These are the Strategies to be set to reduce delay in the design as in the below images 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124363548-751d8100-dc59-11eb-9305-6fd64261e7e1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
