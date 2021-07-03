@@ -465,10 +465,23 @@ This step is done to deal with antenna violations caused during reaction ion etc
 
 ##### OpenLane directory Structure
 
-OpenLane is a flow rather than atools which comprises of many open source EDA tools
+OpenLane is a flow rather than a tool which comprises of many open source EDA tools.
+
+
+        $ cd Desktop/work/tools
+        $ ls -ltr
+        $ cd openlane_working_dir
 
 
 ![image](https://user-images.githubusercontent.com/60011091/123998643-4e5c1200-d9ef-11eb-9104-4d49016dd6a1.png)
+
+
+       
+        $ ls -ltr
+        $ cd pdks 
+        $ ls -ltr 
+        $ cd sky130A
+        $ ls -ltr
 
 
 
@@ -480,6 +493,20 @@ OpenLane is a flow rather than atools which comprises of many open source EDA to
 
 ![image](https://user-images.githubusercontent.com/60011091/123999153-d3472b80-d9ef-11eb-859e-b58fc20fe150.png)
 
+
+
+
+
+           $ ls -ltr
+           $ cd libs.ref
+           $ ls -ltr 
+           $ cd ../
+           $ cd libs.tech
+           $ ls -ltr
+           $ cd ../libs.ref
+           $ cd sky130_fd_sc_hd
+           $ ls -ltr
+           
 
 
 
@@ -500,6 +527,15 @@ OpenLane is a flow rather than atools which comprises of many open source EDA to
 
 
 
+
+              
+           $ ls -ltr
+           $ cd lib
+           $ ls -ltr
+              
+           
+           
+
 ![image](https://user-images.githubusercontent.com/60011091/124000551-53ba5c00-d9f1-11eb-8e06-02e28f538137.png)
 
 
@@ -511,14 +547,30 @@ OpenLane is a flow rather than atools which comprises of many open source EDA to
 
 
 
-![image](https://user-images.githubusercontent.com/60011091/124000925-b7448980-d9f1-11eb-888a-92c6f81144ef.png)
 
-
-##### Preparation of design 
+##### Preparation of OpenLane
 
 
 Interactive flow of OpenLane 
 
+
+
+          $ cd../../
+          $ cd../../../
+          $ cd openlane_working_dir
+          $ cd openlane
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124000925-b7448980-d9f1-11eb-888a-92c6f81144ef.png)
+
+        
+        
+        
+         $make mount
+         bash-4.2$ pwd
+         bash-4.2$ ls -ltr
+         bash-4.2$ ./flow.tcl -interactive
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124001831-a8120b80-d9f2-11eb-96a9-62c6a6f48a4d.png)
@@ -526,14 +578,14 @@ Interactive flow of OpenLane
 
 
 
-                 $make mount
-                 bash-4.2$ pwd
-                 bash-4.2$ ls -ltr
-                 bash-4.2$ ./flow.tcl -interactive
 
 
 
 The below images shows the designs in the OpenLane design folder
+
+
+         $ cd designs
+         $ ls -ltr
 
 
 
@@ -553,7 +605,11 @@ Picorv32a is the design and its contents are shown in the below images.
 
 
 
-
+         $ cd picorv32a
+         $ ls -ltr 
+         $ cd src
+         $ ls -ltr
+         
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124002670-a5fc7c80-d9f3-11eb-8ba1-51f17b68d317.png)
@@ -577,6 +633,9 @@ config.tcl file for picorv32a
 
 
 
+        $ less config.tcl
+
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124004206-6cc50c00-d9f5-11eb-9c99-50fc903e6867.png)
@@ -586,8 +645,6 @@ config.tcl file for picorv32a
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124003977-31c2d880-d9f5-11eb-8659-353934a7113f.png)
-
-
 
 
 
@@ -606,12 +663,23 @@ sky130_fd_sc_hd_config.tcl for picorv32a
 
 Preparation of design 
 
+
+      % pacakge require openlane 0.9
+      % prep -design picorv32a
+
 ![image](https://user-images.githubusercontent.com/60011091/124005058-494e9100-d9f6-11eb-8b01-30b771ae1936.png)
 
-
-
-
-
+      
+      
+      
+      $ ls -ltr
+      $ cd runs
+      $ ls -ltr
+      $ cd 30-06_17-25
+      $ ls -ltr
+      
+      
+ The below images shows all the runs of the design specific to date the design was run under run folder from picorv32a design. 
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124005417-aa766480-d9f6-11eb-9ee7-6c27221f4cb7.png)
@@ -638,8 +706,11 @@ Preparation of design
 
 merge.lef contents 
 
-![image](https://user-images.githubusercontent.com/60011091/124006066-70599280-d9f7-11eb-83c6-1135fd4b1ac4.png)
 
+      
+      
+
+![image](https://user-images.githubusercontent.com/60011091/124006066-70599280-d9f7-11eb-83c6-1135fd4b1ac4.png)
 
 
 
@@ -658,6 +729,12 @@ merge.lef contents
 
 
 config.tcl in reports directory
+
+
+
+     $ cd reports
+     $ ls -ltr
+
 
 ![image](https://user-images.githubusercontent.com/60011091/124006444-e8c05380-d9f7-11eb-92ee-a14571ac505a.png)
 
@@ -689,7 +766,7 @@ config.tcl in reports directory
 
 
 
-##### Synthesizing picorv32a design reports
+##### Synthesized picorv32a design reports
 
 ![image](https://user-images.githubusercontent.com/60011091/124007257-d4c92180-d9f8-11eb-9c33-f07cc0eb7b00.png)
 
@@ -792,13 +869,13 @@ Die which consist of core is a small semiconductor material specimen on which th
 -Netlist occupies the core area leading to 100% utilization.
 
 
-       Utilization Factor = Area occupied by the Netlist/ Total Area of the core 
+     Utilization Factor = Area occupied by the Netlist/ Total Area of the core 
        
        
 -Whenever the Utilization Factor=1, the core is fully occupied and we are not allowed to ad any extra cells in our design and the core will take square shaped structure.
 
 
-       Aspect Ration= Height/ Width
+     Aspect Ration= Height/ Width
        
        
 -Whenever the Aspect Ratio = 1, it signifies that the chip is square shaped. But whenever the Aspect Ratio or Utilization Factor is not 1, then  the chip will take rectangular shaped structure.
@@ -806,7 +883,7 @@ Die which consist of core is a small semiconductor material specimen on which th
 
 ####  Preplaced Cells
 
-
+      
 
 
 ![IPs_Workspace](https://user-images.githubusercontent.com/60011091/124118719-3e940a80-da8f-11eb-8e60-e6f5b8c704b7.jpg)
@@ -822,7 +899,12 @@ Die which consist of core is a small semiconductor material specimen on which th
 ##### Running floorplan in OpenLane
 
 
-Configuaration folder of OpenLane 
+Configuration folder of OpenLane 
+
+       
+       $ cd configuration
+       $ pwd
+       $ ls -ltr 
 
 
 
@@ -833,7 +915,13 @@ Configuaration folder of OpenLane
 ![image](https://user-images.githubusercontent.com/60011091/124124108-af3e2580-da95-11eb-91ce-e1fed9c16612.png)
 
 
+
+
+
 README.md File
+
+
+
 
 ![image](https://user-images.githubusercontent.com/60011091/124123717-3e970900-da95-11eb-81d3-e29abf1acbab.png)
 
@@ -864,6 +952,12 @@ floorplan.tcl file
 
 picorv32a Folder contents 
 
+         
+     $ cd designs/picorv32a
+     $ pwd
+     $ ls -ltr 
+     
+
 
 ![image](https://user-images.githubusercontent.com/60011091/124124648-558a2b00-da96-11eb-9212-06c426f5f2b9.png)
 
@@ -877,6 +971,9 @@ Config.tcl for picorv32a
 
 
 Running Floorplanning
+
+
+    % run_floorplan
 
 ![image](https://user-images.githubusercontent.com/60011091/124125504-4b1c6100-da97-11eb-9681-a40ee2993351.png)
 
@@ -909,6 +1006,17 @@ Running Floorplanning
  Viewing Floorplanning files
  
  
+ 
+    $ cd picorv32a
+    $ less config.tcl
+    $ cd runs
+    $ ls -ltr
+    $ cd 30-06_17-25
+    $ ls -ltr
+    $ less config.tcl
+    $ cd logs/floorplan/
+    $ ls -ltr 
+ 
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124126385-41dfc400-da98-11eb-839a-2f7a69f4179a.png)
@@ -936,10 +1044,19 @@ Config file in the picorv32a runs folder
 Picorv32a def file 
 
 
+    $ cd 30-06_17-25
+    $ ls -ltr
+    $ less picorv32a.floorplan.def
+
 ![image](https://user-images.githubusercontent.com/60011091/124127655-a18a9f00-da99-11eb-9bb2-ff556e21e2f2.png)
 
 
 Opening floorplan using Magic 
+
+
+    $ magic -T /home/john/Desktop/work/tools.openlane_working_dir/openlane/pdks/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def & 
+    
+
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124128834-c7647380-da9a-11eb-8f68-5156d5c50338.png)
@@ -962,12 +1079,6 @@ Opening floorplan using Magic
 
 ![image](https://user-images.githubusercontent.com/60011091/124130672-a866e100-da9c-11eb-8cc9-d70be38d077d.png)
 
-
-
-
-
-
-![image](https://user-images.githubusercontent.com/60011091/124130835-d1877180-da9c-11eb-9e50-3156e387963f.png)
 
 
 
@@ -1018,6 +1129,9 @@ This image shows the common things across all the steps in OpenLane flow.
 #### Lab For Placement
 
 
+    % run_placement
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124143057-6cd21400-daa8-11eb-8543-b587fa67be30.png)
 
 
@@ -1048,14 +1162,26 @@ This image shows the common things across all the steps in OpenLane flow.
 Viewing def file of placement in picorv32a design 
 
 
+    $ cd results/placement
+    $ ls
+    
+
+
 ![image](https://user-images.githubusercontent.com/60011091/124144262-6ee8a280-daa9-11eb-8d85-2d9ea7e532f5.png)
 
 
-![image](https://user-images.githubusercontent.com/60011091/124144516-ae16f380-daa9-11eb-85aa-969a87911f1c.png)
+
 
 
 
 Magic Layout after Placement of picorv32a
+
+
+
+    $ magic -T /home/john/Desktop/work/tools.openlane_working_dir/openlane/pdks/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def & 
+
+![image](https://user-images.githubusercontent.com/60011091/124144516-ae16f380-daa9-11eb-85aa-969a87911f1c.png)
+
 
 
 
@@ -1270,12 +1396,6 @@ The above table summarizes the concepts learn in this section all the % is taken
 
 
 
-
-
-
-
-
-
 ## Day-3 Design and characterize one library cell using Magic Layout tool and ngspice
 
 
@@ -1285,6 +1405,64 @@ The above table summarizes the concepts learn in this section all the % is taken
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124224442-47362080-db23-11eb-87c8-e6b7689c07ea.png)
+
+
+The above image shows the ngspice simulator which we are going to use in this lab.
+
+
+#### IO Placer Revision
+
+![image](https://user-images.githubusercontent.com/60011091/124339904-1dd2ce80-dbcf-11eb-8f79-7b3ab99def93.png)
+
+
+The above image indicates the location from where we are trying to read picorv32a.floorplan.def to understand about IO placers in the design in floorplan step.
+
+![image](https://user-images.githubusercontent.com/60011091/124340035-f3354580-dbcf-11eb-9f29-e188798b524e.png)
+
+
+From the above image we see that by default pins are placed equidistantly from each other.
+
+![image](https://user-images.githubusercontent.com/60011091/124340100-6f2f8d80-dbd0-11eb-9d73-ca2c5502339a.png)
+
+
+This is the zoomed version of the previous image to show that the pin are placed equidistantly from each other.
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124340363-4e683780-dbd2-11eb-87ad-2bad0a0e3484.png)
+
+
+Here in the image we see FP_IO_MODE is set to 1, 0 for matching mode and 1 for random equidistant pins.
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124340446-05fd4980-dbd3-11eb-823c-cd1bcdf1a465.png)
+
+
+Here we are setting FP_IO_MODE to 2 in the above image. 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124340627-18c44e00-dbd4-11eb-91af-a501b4f8bbc2.png)
+
+
+This is the layout we will be getting where pins are not equidistant from each other but pins are stacked upon one another.
+
+
+#### SPICE Deck creation and simulation for CMOS Inverter
+
+SPICE Deck is nothing but the connectivity information about the netlist.
+
+This has the connectivity information, inputs to be provided to the simulator, tap points at which we will take the  outputs etc.
+
+
+![image](https://user-images.githubusercontent.com/60011091/124341467-41e7dd00-dbda-11eb-91b1-8a5f5f566747.png)
+
+
+We are going to create SPICE Deck for the circuit in the above image.
+
+    
+
+
 
 
 
