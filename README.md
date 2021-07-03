@@ -1450,7 +1450,9 @@ This is the layout we will be getting where pins are not equidistant from each o
 
 #### SPICE Deck creation and simulation for CMOS Inverter
 
-SPICE Deck is nothing but the connectivity information about the netlist.
+##### SPICE Deck creation
+
+-SPICE Deck is nothing but the connectivity information about the netlist.
 
 This has the connectivity information, inputs to be provided to the simulator, tap points at which we will take the  outputs etc.
 
@@ -1460,7 +1462,440 @@ This has the connectivity information, inputs to be provided to the simulator, t
 
 We are going to create SPICE Deck for the circuit in the above image.
 
+- Defining component value ie values of PMOS and the NMOS.
+
+Here we have taken W/L ratio for PMOS (M1) and NMOS (M2) to be 0.375u/0.25u and Cload as 10 fF
+
+
+![image](https://user-images.githubusercontent.com/60011091/124343934-f5f26380-dbec-11eb-8263-050b2a4c2e57.png)
+
+Here the above image is extended circuit of the just previous circuit which has input gate voltage as 2.5V and VDD as 2.5V based on technology used so here we use 0.25u 0r 250nm technology.
+cvxz
+-Identifying the nodes in the circuit 
+
+![image](https://user-images.githubusercontent.com/60011091/124344067-f5a69800-dbed-11eb-885f-9ce7ed60a4ca.png)
+
+This image shows the nodes indicated by blue dotted lines.
+
+
+
+-Naming the nodes
+
+
+From the identifying nodes image we are naming the nodes as in which is between Vin and VSS, out for the node which is connected to Cload of 10fF and vdd as node connecting VDD and Vss and is shown as below 
+
+![image](https://user-images.githubusercontent.com/60011091/124344601-d1988600-dbf0-11eb-9d50-abf11ee62221.png)
+
+
+SPICE Deck is written as shown below: 
+
+
+    ** Model Descriptions **
+    ** Netlist Descriptions **
+    M1 out in vdd vdd pmos W=0.375u L=0.25u
+    M2 out in 0  0  nmos W=0.375u L=0.25u
     
+    cload out 0 10f
+    
+    Vdd vdd 0 2.5
+    Vin in  0 2.5
+    
+    *** Simulation Commands ***
+    .op
+    .dc Vin 0 2.5 0.05
+    *** .include tsmc _025um_model.mod   ***
+    .LIB "tsmc _025um_model.mod" CMOS_MODELS
+    .end 
+    
+ ![image](https://user-images.githubusercontent.com/60011091/124345300-c3993400-dbf5-11eb-9ae3-ee00055accb6.png)
+
+
+The above image is the ngspice window.
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124345339-f6dbc300-dbf5-11eb-9b4c-2febf6adad18.png)
+
+The above image shows the technology file of 0.25um technology
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124345391-2db1d900-dbf6-11eb-8f7b-24d476ed5518.png)
+
+
+The location of the technology file is passed as command in the above image.
+
+Then we give 
+
+    ngspice2 -> cmosVTC_PMOSwidth_NMOSwidth.cir
+
+Executing the circuit
+
+    ngspice3 -> run
+    ngspice4 -> setplot 
+    
+   ![image](https://user-images.githubusercontent.com/60011091/124345508-eaa43580-dbf6-11eb-8e34-e31276b60709.png)
+   
+   This image tells us as to what has happened after passing setplot command. So dc1 is for dc characteristics, op1 for operating point and const for constant values.
+   
+    ngspice5 -> dc1
+    ngspice5 -> display    --->displays nodes in the circuit
+    ngspice6 -> out vs in      ---> plotting input node vs output node
+    
+![image](https://user-images.githubusercontent.com/60011091/124345641-d876c700-dbf7-11eb-8720-9437e3f8f073.png)
+
+This is the Voltage characteristics of the given CMOS inverters
+
+
+#### Switching Vm
+
+
+  
+![image](https://user-images.githubusercontent.com/60011091/124345749-5509a580-dbf8-11eb-9af0-e685350e905e.png)
+
+This image compares two different devices having different W/L ratios. Even though the switching occurs at different places the waveforms are the same. this shows the robustness of CMOS inverters interms of its apllications
+   
+   
+   Vm is the point where vin=vout
+   
+   
+   ![image](https://user-images.githubusercontent.com/60011091/124346008-f8a78580-dbf9-11eb-801e-4cd033fae733.png)
+
+
+From the image 1st graph had Vm around 0.98V and 2nd one had Vm as 1.25V approximately.
+
+
+#### Lab to git clone vsdstdcell design 
+
+
+
+    $ pwd     -Your present working directory should be openlane directory 
+    $ git clone https://github.com/nickson-jose/vsdstdcelldesign.git 
+    $ ls -ltr
+    $ cd vsdstdcelldesign
+    $ ls -ltr
+    
+    
+    
+
+![image](https://user-images.githubusercontent.com/60011091/124346214-3eb11900-dbfb-11eb-8ea2-9e295781fe86.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124346380-17a71700-dbfc-11eb-8fac-08dc64294609.png)
+
+
+Copying sky130A.tech 
+
+     $ cd ../../       -->cding to openlane_working_dir
+     $ pdks/sky130A/libs.tech/magic
+     $ ls -ltr
+     $ cp sky130A.tech /home/john/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+     
+     
+     
+ The below image made use of the above commands for copying sky130.tech
+
+![image](https://user-images.githubusercontent.com/60011091/124346520-e11dcc00-dbfc-11eb-9481-c334b9e01c82.png)
+
+
+    $ cd /openlane/vsdstdcelldesign
+    $ ls -ltr
+    $ magic -T sky130A.tech sky130_inv.mag &
+    
+    
+![image](https://user-images.githubusercontent.com/60011091/124346820-9c933000-dbfe-11eb-9ad5-c66297913498.png)
+
+
+Viewing sky130_inv.mag in Magic Layout tool
+
+
+![image](https://user-images.githubusercontent.com/60011091/124346851-cea49200-dbfe-11eb-9d70-02d8a154e405.png)
+
+
+#### Inception of Layout Fabrication process
+
+
+
+We take a 16-mask CMOS process
+
+-Selecting a substrate
+
+Here we go for P type substrate with high resistivity, doping level as 10^15 cm^-3 and orientation as 100
+
+-Creating active region for transistors
+
+Here we are creating small pockets or buckets as active region on the ptype substrate where we will create pmos and nmos transistors
+
+-> Grow Silicon on Silicon dioxide which acts as an insulator.
+-> Deposit a layer silicon nitride.
+-> Deposit a layer of photoresist.
+-> Then we create  mask1 and UV light is passed through the layer.
+-> Washing out photoresist.
+-> Removing the mask.
+-> Etching the silicon nitride.
+-> Etching the resist from the layer.
+-> Placed in oxidation furnace.
+-> Growing field oxide. This process is called LOCOS.
+-> Etching the remaining silicon nitride using phosphoric acid.
+
+
+- N well and P well formation
+
+For P well formation
+-> Deposit a layer of photoresist.
+-> Then we create  mask2 and UV light is passed through the layer
+-> Washing out photoresist.
+-> Removing the mask.
+-> Creating P well using Boron by ion implantation.
+
+
+For N well formation
+
+-> Deposit a layer of photoresist.
+-> Then we create  mask3 and UV light is passed through the layer
+-> Washing out photoresist.
+-> Removing the mask.
+-> Creating N well using Phosphorus by ion implantation.
+
+
+-> Placing the layer consisting of P well and N well in high temperature furnace.
+-> diffuse the boron and the phosphorus atoms
+->This forms a twin tub.
+
+- Formation of gate terminal
+
+Controlling doping concentration can be done by:
+
+For N well gate formation 
+
+-> Deposit a layer of photoresist.
+-> Then we create  mask2 and UV light is passed through the layer.
+-> Washing out photoresist.
+-> Removing the mask.
+-> Introducing boron with lower energy by ion implantation which inturn controls the threshold voltage.
+
+For P well gate formation
+
+-> Deposit a layer of photoresist.
+-> Then we create  mask2 and UV light is passed through the layer.
+-> Washing out photoresist.
+-> Removing the mask.
+-> Introducing arsenic with lower energy by ion implantation which inturn controls the threshold voltage.
+-> Original oxide is removed/stripped using hydrofluoric acid.
+-> Regrowing oxide again to provide high quality oxide.
+-> Deposit a polysilicon layer.
+-> N type ion implants for low gate resistance.
+-> Deposit a layer of photoresist.
+-> Then we create  mask6.
+-> Etching the resist from the layer.
+-> Removing the mask.
+->Remaining polysilicon layer outside the photoresist can be etched away.
+-> Removing the remaining resist.
+
+
+-Lightly doped drain formation(LDD)
+
+-> For this we need doping profiles like P+,P- and N along N well and N+, N- and P along P well side.
+-> Reasons for these profiles: Hot electron effect and short channel effect.
+ 
+ For N well
+ 
+ -> Deposit a layer of photoresist.
+ -> Then we create  mask7 
+ -> Washing out photoresist.
+ -> Introducing phosphorus by ion implantation. 
+ -> Removing phtoresist from n well and apply photoresist and mask8 on pwell.
+ -> Removing mask from p well.
+ -> Introducing  boron by ion implantation.
+ -> We add spacers by depositing a thick SiO2 or Si3N4 layer on the complete structure and then we apply plasma anisotropic etching.
+ 
+ - Source and drain formation 
+
+-> Thin screen oxide is added to avoid channeling during implants.
+-> Deposit a layer of photoresist.
+-> Then we create  mask9 in Nwell side.
+-> Removing mask from nwell after it's exposed to other implants
+-> introducing Arsenic byion implantation.
+
+We apply the same process to P well side but now the mask used will be mask10. Then we introduce a p type impurity like boron. We apply high temperature furnace to the structure. 
+
+
+
+#### Lab for Sky130 basic layer and LEF using inverters
+
+
+![image](https://user-images.githubusercontent.com/60011091/124351059-db80b000-dc15-11eb-86fd-52987d5d287a.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124351132-374b3900-dc16-11eb-9066-81d2531b5975.png)
+
+
+
+Here in the imageswe highlighted a sub layer and we used the command as below:
+
+
+    % what
+    
+    
+ Difference between layout and LEF 
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/60011091/124351202-990ba300-dc16-11eb-96da-6a8f37fd80e4.png)
+
+
+The above image is the layout the inverter.
+
+The layout will have all the informations from metal layers,vias and all the logical and other informations.
+
+![image](https://user-images.githubusercontent.com/60011091/124351269-fbfd3a00-dc16-11eb-9f7d-6c4dc9dc3afe.png)
+
+ The above image was taken from Nickson Jose's vsdstdcell design repo.
+ 
+ But LEF reveals only the metal layers without exposing any logical part of the design. For Pnr of the cell we don't need any logic of the cell and all we need to know where are the Pr boundaries. 
+ 
+    
+#### Lab for creating basic std cell layout and extracting spice netlist
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124351854-68c60380-dc1a-11eb-91f7-c1b62d0533e2.png)
+
+
+This image shows DRC errors in the layout if we move layers intentionally and unintentionally.
+
+
+
+
+       $extract all
+
+![image](https://user-images.githubusercontent.com/60011091/124352119-10900100-dc1c-11eb-9cd4-264a981cec9c.png)
+
+          
+
+This image shows the command for extracting netlist from an inverter layout using tkcon command window.
+
+
+       $ ls -ltr    ---> under vsdstdcelldesign directory
+
+
+![image](https://user-images.githubusercontent.com/60011091/124352263-0c181800-dc1d-11eb-8512-991052b17203.png)
+
+
+This image shows that the previous command extract all has created a file called sky130_inv.ext in vsdstdcelldesign directory.
+
+
+
+
+        $ ext2spice cthesh 0 rthresh 0
+        $ ext2spice
+
+
+![image](https://user-images.githubusercontent.com/60011091/124352683-7762e980-dc1f-11eb-8224-c7471f776807.png)
+
+
+This image shows that the above commands for extracting spice from an inverter layout using tkcon command window.
+
+
+        $ ls -ltr    ---> under vsdstdcelldesign directory
+
+
+![image](https://user-images.githubusercontent.com/60011091/124352782-2b647480-dc20-11eb-90b9-a54014a08bb3.png)
+
+
+This image shows that the previous command extract 2 spice commands extracts inverter layout to spice format in vsdstdcelldesign directory.
+
+
+
+The below images shows the contents of sky130_inv.spice 
+
+       $ vim sky130_inv.spice
+
+
+![image](https://user-images.githubusercontent.com/60011091/124353281-42589600-dc23-11eb-9696-a6f953f9bf95.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124353267-2b19a880-dc23-11eb-9858-236887d1e920.png)
+
+
+
+
+
+
+#### Lab for creating SPICE final Deck using Sky130 tech
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124353267-2b19a880-dc23-11eb-9858-236887d1e920.png)
+
+The above image is the initial SPICE Deck netlist
+
+
+ The below image shows where pshort.lib and n.short.lib is located
+
+
+         $ cd libs
+         $ ls -ltr 
+         
+
+![image](https://user-images.githubusercontent.com/60011091/124353679-89478b00-dc25-11eb-99fc-274cc95e8e6d.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124354633-91ee9000-dc2a-11eb-8664-afa91e364279.png)
+
+
+The above image shows the final SPICE DECK netlist.
+
+
+
+These below images shows the ngspice window with timing analysis and commands to plot the required parameters.
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124354730-0de8d800-dc2b-11eb-82ae-a155d0152ce6.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124354783-556f6400-dc2b-11eb-9ba0-dc4ed09e04c1.png)
+
+
+
+This below image shows the waveform  in accordance with the SPICE Deck netlist
+
+![image](https://user-images.githubusercontent.com/60011091/124354931-3de4ab00-dc2c-11eb-8f01-cda4c9d51d98.png)
+
+
+These below images show the zoomed version of the waveform for rise_transition time
+
+
+![image](https://user-images.githubusercontent.com/60011091/124355119-38d42b80-dc2d-11eb-9eb0-6d8ce9639b72.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124355125-425d9380-dc2d-11eb-9d79-42e2b7d57a99.png)
+
+
+
+The below image shows the coordinates when expanded for rise_transition time along with calculation 
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124355357-4f2eb700-dc2e-11eb-988a-e78fc12006d7.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1469,6 +1904,11 @@ We are going to create SPICE Deck for the circuit in the above image.
 
 
 ## Day-4 Pre-layout timing analysis and importance of good clock tree
+
+
+### 
+
+
 
 
 
