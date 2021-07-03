@@ -1126,7 +1126,7 @@ This is the stage where we estimate the wire length and capacitances so based on
 This image shows the common things across all the steps in OpenLane flow.
 
 
-#### Lab For Placement
+### Lab For Placement
 
 
     % run_placement
@@ -1205,7 +1205,7 @@ Magic Layout after Placement of picorv32a
 
 
 
-#### Cell Flow 
+### Cell Flow 
 
 
 
@@ -1249,7 +1249,7 @@ The below images show an example of SPICE Models From Tanner EDA Tool for 0.18nm
 ![image](https://user-images.githubusercontent.com/60011091/124154041-b6276100-dab2-11eb-9fa9-f6deed66bef9.png)
 
 
-#### Design Steps
+### Design Steps
 
 -Circuit Design 
 
@@ -1316,7 +1316,7 @@ The below two images shows the netlist for the main circuit and subcircuit for t
 This GUNA softwares Takes all the files shown in this sections as inputs and generates outputs as Timing, Noise and  Power .libs.
 
 
-#### Timing Threshold Definitions
+### Timing Threshold Definitions
 
 Low depicts the values which are close to 0 power supply.
 
@@ -1448,7 +1448,7 @@ Here we are setting FP_IO_MODE to 2 in the above image.
 This is the layout we will be getting where pins are not equidistant from each other but pins are stacked upon one another.
 
 
-#### SPICE Deck creation and simulation for CMOS Inverter
+### SPICE Deck creation and simulation for CMOS Inverter
 
 ##### SPICE Deck creation
 
@@ -1613,7 +1613,7 @@ Viewing sky130_inv.mag in Magic Layout tool
 ![image](https://user-images.githubusercontent.com/60011091/124346851-cea49200-dbfe-11eb-9d70-02d8a154e405.png)
 
 
-#### Inception of Layout Fabrication process
+### Inception of Layout Fabrication process
 
 
 
@@ -1906,7 +1906,10 @@ The below image shows the coordinates when expanded for rise_transition time alo
 ## Day-4 Pre-layout timing analysis and importance of good clock tree
 
 
-### 
+### Labs to convert grid info to track info
+
+
+
 
 
 
