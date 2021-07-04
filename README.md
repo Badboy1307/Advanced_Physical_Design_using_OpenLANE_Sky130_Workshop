@@ -2058,9 +2058,18 @@ Preparing the design
 ![image](https://user-images.githubusercontent.com/60011091/124362253-79de3700-dc51-11eb-87bc-30b75fb584a3.png)
 
 
+Setting and adding lef files 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124370761-71f5b580-dc98-11eb-80c4-7440b39768f8.png)
+
+
 Performing Synthesis 
 
 ![image](https://user-images.githubusercontent.com/60011091/124362416-3c2dde00-dc52-11eb-8d06-245d83147990.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124370832-0233fa80-dc99-11eb-849b-6288f0294e3d.png)
+
 
 
 
@@ -2118,6 +2127,48 @@ We round the values meeting 50ff at node B for CBUF 2 for a different input cond
 
 
 
+### Setup Timing Analysis
+
+Specifications:
+
+Clock Frequency(F)= 1GHZ
+Clock Period(T)= 1/F
+               =1/1GHZ
+               =1ns
+               
+               
+![image](https://user-images.githubusercontent.com/60011091/124371990-aa02f580-dca4-11eb-84ff-2709db099a0d.png)
+
+
+The setup timing analysis says that if for this particular circuit to work, the combination delay (θ) ie internal delay of the launch flop and the combinational delay in the above circuit must be less than the time period given in the specifications.
+
+    θ < T
+    
+For the capture flop to settle with the received data we have to tweak  θ < T so, the condition will look like
+
+    θ < (T-S)
+    where S is the setup time of Capture Flipflop
+    
+
+### Clock Jitter and uncertainty
+
+Clock Jitter: temporary variation of clock period.
+
+For modeling this jitter we take one more parameter called uncertainty
+    
+After we introduce this concept,  θ < (T-S) is again changed based on setup uncertainty(SU) so the condition becomes
+
+
+     θ < (T-S-SU)
+     
+ ### Clock tree Routing (H Tree Algorithm)
+ 
+ H Tree Algorithm takes a particular clock route and it claculates the distance from a particular point to all its end points and tries to comment on the midpoint and builds a tree from that midpoint.
+ 
+
+
+
+
 ### Configuring synthesis settings to fix Slack and include vsdinv
 
 README.md file for applying synthesis strategy
@@ -2138,6 +2189,12 @@ These are the Strategies to be set to reduce delay in the design as in the below
 ![image](https://user-images.githubusercontent.com/60011091/124363548-751d8100-dc59-11eb-9305-6fd64261e7e1.png)
 
 
+ 
+ 
+ 
+    
+    
+    
 
 
 
