@@ -2070,6 +2070,188 @@ Performing Synthesis
 
 ![image](https://user-images.githubusercontent.com/60011091/124370832-0233fa80-dc99-11eb-849b-6288f0294e3d.png)
 
+### Configuring synthesis settings to fix Slack and include vsdinv
+
+README.md file for applying synthesis strategy
+
+![image](https://user-images.githubusercontent.com/60011091/124363161-4f8f7800-dc57-11eb-91f6-90fcba07b602.png)
+
+
+Setting SYNTH_STRATEGY 1
+![image](https://user-images.githubusercontent.com/60011091/124363182-7483eb00-dc57-11eb-84b7-cdadcff4f8d0.png)
+
+When we set this value as 1 where the area would would increase but the delay will decrease significantly.
+
+
+
+These are the Strategies to be set to reduce delay in the design as in the below images 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124363548-751d8100-dc59-11eb-9305-6fd64261e7e1.png)
+
+Changing synth.tcl and reducing tns and wns 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124377712-f7925900-dcca-11eb-92ae-37c61b8e9a5e.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124377737-1d1f6280-dccb-11eb-8c2b-563d79adec89.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124377746-2f999c00-dccb-11eb-8514-5d1dd1a86078.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124377866-f281d980-dccb-11eb-9411-b929459be206.png)
+
+
+
+
+
+
+
+
+
+Performing initial floorplan 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124375101-ec84fc00-dcbd-11eb-9213-f4c97d8c44c8.png)
+
+IO placement 
+
+![image](https://user-images.githubusercontent.com/60011091/124375247-e5aab900-dcbe-11eb-9674-b277286d70b7.png)
+
+Running placement on processed Design
+
+
+    $ global_placement_or
+      
+![image](https://user-images.githubusercontent.com/60011091/124375737-5b178900-dcc1-11eb-804e-bf4df3b1850f.png)
+
+
+Improved Slack after running placement on processed Design
+![image](https://user-images.githubusercontent.com/60011091/124378130-6f618300-dccd-11eb-9d59-3973d1a1729d.png)
+
+
+Running placement using RePlace
+
+     $ global_placement
+     
+![image](https://user-images.githubusercontent.com/60011091/124376081-dded1380-dcc2-11eb-805a-79a9ef8db1b2.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376125-10970c00-dcc3-11eb-95e3-9143bc0fb708.png)
+
+
+
+
+Tap decap using OpenRoad app
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376160-3d4b2380-dcc3-11eb-947d-a91064d04110.png)
+
+
+Detailed placement using OpenRoad app 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376230-931fcb80-dcc3-11eb-92c3-f1b54eb30952.png)
+
+
+
+
+Detailed placement using OpenDP 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376840-79cc4e80-dcc6-11eb-90a0-480344b8950a.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124377099-de3bdd80-dcc7-11eb-83ed-d7f67cb8f630.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378170-acc61080-dccd-11eb-9463-b33550a9030f.png)
+
+
+
+
+Detailed placement after Tap_decap
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378238-062e3f80-dcce-11eb-9c0e-4ebb757bd42b.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378247-11816b00-dcce-11eb-9863-5d2a47e03307.png)
+
+
+
+
+PDN Generation 
+
+![image](https://user-images.githubusercontent.com/60011091/124378326-5ad1ba80-dcce-11eb-9a2c-87d2c2b3ae39.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124378337-67561300-dcce-11eb-8a07-caa6efe97ce2.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124378345-75a42f00-dcce-11eb-9cca-6ffd8840cc60.png)
+
+
+
+
+Running Routing 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378358-85237800-dcce-11eb-8bd6-832c2218bfd2.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378383-ad12db80-dcce-11eb-83e0-32ee44b4ff5e.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378394-b9973400-dcce-11eb-8bef-a814dc609037.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378406-c6b42300-dcce-11eb-8341-edc4bb721307.png)
+
+
+Significant decrease in iteration during Detailed routing
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378517-58239500-dccf-11eb-8a4b-62d2e5505870.png)
+
+
+
+
+
+Magic
+   
+   ![image](https://user-images.githubusercontent.com/60011091/124379944-aa68b400-dcd7-11eb-91c1-529e2909fbc3.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124379952-bfddde00-dcd7-11eb-9310-6131c372e89f.png)
+
+
+Magic DRC Check
+
+![image](https://user-images.githubusercontent.com/60011091/124380371-f4529980-dcd9-11eb-8a0f-12035fe271c3.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124380388-03d1e280-dcda-11eb-92ad-87dd82c7857b.png)
+
+
+MAGIC SPICE EXPORT
+
+![image](https://user-images.githubusercontent.com/60011091/124380618-3fb97780-dcdb-11eb-9fcc-71eb988a8ae1.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124380629-4b0ca300-dcdb-11eb-90c7-51e3ac292fd0.png)
+
+ MAGIC Antenna Check
+ 
+ ![image](https://user-images.githubusercontent.com/60011091/124380665-8b6c2100-dcdb-11eb-8332-edd64c95e6e8.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124380673-96bf4c80-dcdb-11eb-8461-bd30b84438ae.png)
+
+   
 
 
 
@@ -2169,24 +2351,6 @@ After we introduce this concept,  θ < (T-S) is again changed based on setup unc
 
 
 
-### Configuring synthesis settings to fix Slack and include vsdinv
-
-README.md file for applying synthesis strategy
-
-![image](https://user-images.githubusercontent.com/60011091/124363161-4f8f7800-dc57-11eb-91f6-90fcba07b602.png)
-
-
-Setting SYNTH_STRATEGY 1
-![image](https://user-images.githubusercontent.com/60011091/124363182-7483eb00-dc57-11eb-84b7-cdadcff4f8d0.png)
-
-When we set this value as 1 where the area would would increase but the delay will decrease significantly.
-
-
-
-These are the Strategies to be set to reduce delay in the design as in the below images 
-
-
-![image](https://user-images.githubusercontent.com/60011091/124363548-751d8100-dc59-11eb-9305-6fd64261e7e1.png)
 
 
  
