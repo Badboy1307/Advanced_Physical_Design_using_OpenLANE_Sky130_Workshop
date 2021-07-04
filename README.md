@@ -2111,145 +2111,6 @@ Changing synth.tcl and reducing tns and wns
 
 
 
-Performing initial floorplan 
-
-
-![image](https://user-images.githubusercontent.com/60011091/124375101-ec84fc00-dcbd-11eb-9213-f4c97d8c44c8.png)
-
-IO placement 
-
-![image](https://user-images.githubusercontent.com/60011091/124375247-e5aab900-dcbe-11eb-9674-b277286d70b7.png)
-
-Running placement on processed Design
-
-
-    $ global_placement_or
-      
-![image](https://user-images.githubusercontent.com/60011091/124375737-5b178900-dcc1-11eb-804e-bf4df3b1850f.png)
-
-
-Improved Slack after running placement on processed Design
-![image](https://user-images.githubusercontent.com/60011091/124378130-6f618300-dccd-11eb-9d59-3973d1a1729d.png)
-
-
-Running placement using RePlace
-
-     $ global_placement
-     
-![image](https://user-images.githubusercontent.com/60011091/124376081-dded1380-dcc2-11eb-805a-79a9ef8db1b2.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124376125-10970c00-dcc3-11eb-95e3-9143bc0fb708.png)
-
-
-
-
-Tap decap using OpenRoad app
-
-
-![image](https://user-images.githubusercontent.com/60011091/124376160-3d4b2380-dcc3-11eb-947d-a91064d04110.png)
-
-
-Detailed placement using OpenRoad app 
-
-
-![image](https://user-images.githubusercontent.com/60011091/124376230-931fcb80-dcc3-11eb-92c3-f1b54eb30952.png)
-
-
-
-
-Detailed placement using OpenDP 
-
-
-![image](https://user-images.githubusercontent.com/60011091/124376840-79cc4e80-dcc6-11eb-90a0-480344b8950a.png)
-
-![image](https://user-images.githubusercontent.com/60011091/124377099-de3bdd80-dcc7-11eb-83ed-d7f67cb8f630.png)
-
-
-
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378170-acc61080-dccd-11eb-9463-b33550a9030f.png)
-
-
-
-
-Detailed placement after Tap_decap
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378238-062e3f80-dcce-11eb-9c0e-4ebb757bd42b.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378247-11816b00-dcce-11eb-9863-5d2a47e03307.png)
-
-
-
-
-PDN Generation 
-
-![image](https://user-images.githubusercontent.com/60011091/124378326-5ad1ba80-dcce-11eb-9a2c-87d2c2b3ae39.png)
-
-![image](https://user-images.githubusercontent.com/60011091/124378337-67561300-dcce-11eb-8a07-caa6efe97ce2.png)
-
-![image](https://user-images.githubusercontent.com/60011091/124378345-75a42f00-dcce-11eb-9cca-6ffd8840cc60.png)
-
-
-
-
-Running Routing 
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378358-85237800-dcce-11eb-8bd6-832c2218bfd2.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378383-ad12db80-dcce-11eb-83e0-32ee44b4ff5e.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378394-b9973400-dcce-11eb-8bef-a814dc609037.png)
-
-
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378406-c6b42300-dcce-11eb-8341-edc4bb721307.png)
-
-
-Significant decrease in iteration during Detailed routing
-
-
-![image](https://user-images.githubusercontent.com/60011091/124378517-58239500-dccf-11eb-8a4b-62d2e5505870.png)
-
-
-
-
-
-Magic
-   
-   ![image](https://user-images.githubusercontent.com/60011091/124379944-aa68b400-dcd7-11eb-91c1-529e2909fbc3.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124379952-bfddde00-dcd7-11eb-9310-6131c372e89f.png)
-
-
-Magic DRC Check
-
-![image](https://user-images.githubusercontent.com/60011091/124380371-f4529980-dcd9-11eb-8a0f-12035fe271c3.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124380388-03d1e280-dcda-11eb-92ad-87dd82c7857b.png)
-
-
-MAGIC SPICE EXPORT
-
-![image](https://user-images.githubusercontent.com/60011091/124380618-3fb97780-dcdb-11eb-9fcc-71eb988a8ae1.png)
-
-
-![image](https://user-images.githubusercontent.com/60011091/124380629-4b0ca300-dcdb-11eb-90c7-51e3ac292fd0.png)
-
- MAGIC Antenna Check
- 
- ![image](https://user-images.githubusercontent.com/60011091/124380665-8b6c2100-dcdb-11eb-8332-edd64c95e6e8.png)
-
-![image](https://user-images.githubusercontent.com/60011091/124380673-96bf4c80-dcdb-11eb-8461-bd30b84438ae.png)
 
    
 
@@ -2352,26 +2213,186 @@ After we introduce this concept,  θ < (T-S) is again changed based on setup unc
 
 
 
-
- 
- 
- 
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Day-5 Final steps for RTL2GDS
+
+
+
+
+Performing initial floorplan 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124375101-ec84fc00-dcbd-11eb-9213-f4c97d8c44c8.png)
+
+IO placement 
+
+![image](https://user-images.githubusercontent.com/60011091/124375247-e5aab900-dcbe-11eb-9674-b277286d70b7.png)
+
+Running placement on processed Design
+
+
+    $ global_placement_or
+      
+![image](https://user-images.githubusercontent.com/60011091/124375737-5b178900-dcc1-11eb-804e-bf4df3b1850f.png)
+
+
+Improved Slack after running placement on processed Design
+![image](https://user-images.githubusercontent.com/60011091/124378130-6f618300-dccd-11eb-9d59-3973d1a1729d.png)
+
+
+Running placement using RePlace
+
+     $ global_placement
+     
+![image](https://user-images.githubusercontent.com/60011091/124376081-dded1380-dcc2-11eb-805a-79a9ef8db1b2.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376125-10970c00-dcc3-11eb-95e3-9143bc0fb708.png)
+
+
+
+
+Tap decap using OpenRoad app
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376160-3d4b2380-dcc3-11eb-947d-a91064d04110.png)
+
+
+Detailed placement using OpenRoad app 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376230-931fcb80-dcc3-11eb-92c3-f1b54eb30952.png)
+
+
+
+
+Detailed placement using OpenDP 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124376840-79cc4e80-dcc6-11eb-90a0-480344b8950a.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124377099-de3bdd80-dcc7-11eb-83ed-d7f67cb8f630.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378170-acc61080-dccd-11eb-9463-b33550a9030f.png)
+
+
+
+
+Detailed placement after Tap_decap
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378238-062e3f80-dcce-11eb-9c0e-4ebb757bd42b.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124378247-11816b00-dcce-11eb-9863-5d2a47e03307.png)
+
+
+Layout of Detailed placement after Tap_decap
+
+
+![image](https://user-images.githubusercontent.com/60011091/124381864-3c75ba00-dce2-11eb-9c6f-87014cffdb16.png)
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124381911-7a72de00-dce2-11eb-8b67-e24a82696703.png)
+
+
+PDN Generation 
+
+![image](https://user-images.githubusercontent.com/60011091/124378326-5ad1ba80-dcce-11eb-9a2c-87d2c2b3ae39.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124378337-67561300-dcce-11eb-8a07-caa6efe97ce2.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124378345-75a42f00-dcce-11eb-9cca-6ffd8840cc60.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382039-0ab12300-dce3-11eb-86ed-5bed26fd629e.png)
+
+
+
+
+
+Running Routing 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382057-1997d580-dce3-11eb-8997-d61c22151ff5.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124382086-30d6c300-dce3-11eb-8e02-6b507bd76371.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382195-d2f6ab00-dce3-11eb-96ba-5c0c37f7375e.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382207-e0ac3080-dce3-11eb-96e4-09c2a9b55c8e.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382222-edc91f80-dce3-11eb-8cbf-dd4af88a1284.png)
+
+
+
+Some images from Detailed Routing iteration 
+
+![image](https://user-images.githubusercontent.com/60011091/124382255-105b3880-dce4-11eb-8e64-bf091feeb6aa.png)
+
+Here in the below image  we can see a significant reduction in violations compared to previous image.
+
+![image](https://user-images.githubusercontent.com/60011091/124382308-587a5b00-dce4-11eb-907e-684319eeba55.png)
+
+In the below image by 41 st iteration all the violations are resolved
+
+![image](https://user-images.githubusercontent.com/60011091/124382385-cc1c6800-dce4-11eb-9e77-735366d8dc64.png)
+
+The below image shows the last iteration for detailed routing ie 57th iterations
+
+![image](https://user-images.githubusercontent.com/60011091/124382407-e5251900-dce4-11eb-8e87-d71aef0c9c51.png)
+
+Final total wire lengths after detailed routing
+
+![image](https://user-images.githubusercontent.com/60011091/124382441-0d147c80-dce5-11eb-8222-caec3ad6d77d.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124382459-2c130e80-dce5-11eb-8d3c-d1aa3a1e696d.png)
+
+
+Checking DRC Violations and SPEF Extraction 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382488-59f85300-dce5-11eb-814d-18c49a98ea0a.png)
+
+
+
+
+
+Magic command 
+   
+   ![image](https://user-images.githubusercontent.com/60011091/124379944-aa68b400-dcd7-11eb-91c1-529e2909fbc3.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124379952-bfddde00-dcd7-11eb-9310-6131c372e89f.png)
+
+
+Magic DRC Check
+
+![image](https://user-images.githubusercontent.com/60011091/124380371-f4529980-dcd9-11eb-8a0f-12035fe271c3.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124380388-03d1e280-dcda-11eb-92ad-87dd82c7857b.png)
+
+
+MAGIC SPICE EXPORT
+
+![image](https://user-images.githubusercontent.com/60011091/124380618-3fb97780-dcdb-11eb-9fcc-71eb988a8ae1.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124380629-4b0ca300-dcdb-11eb-90c7-51e3ac292fd0.png)
+
+ MAGIC Antenna Check
+ 
+ ![image](https://user-images.githubusercontent.com/60011091/124380665-8b6c2100-dcdb-11eb-8332-edd64c95e6e8.png)
+
+![image](https://user-images.githubusercontent.com/60011091/124380673-96bf4c80-dcdb-11eb-8461-bd30b84438ae.png)
+
