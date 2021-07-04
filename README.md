@@ -2410,13 +2410,16 @@ MAGIC SPICE EXPORT
 
 
 
+So by this we come to the end of day five where I've understand the Openlane flow, various commands in the flow, how to add a customized standard cell design to already existing picorv32a design and performing the Openlane flow using this cell's lib files and lef files and understanding the challenges in using an external cell design and ways to solve the issues with the customized cell design and finally we extracted layouts for each of the process in OpenLane flow.
+
 
 
 ## Acknowledgements
 
 1. Kunal Ghosh - Co-founder(VSD Corp. Pvt. Ltd)
-2. Mili Anand  - VSD Teaching Assistant
-3. Mansi Mohapatra  - VSD Teaching Assistant
+2. Nickson Jose - VSD Teaching Assistant
+3. Mili Anand  - VSD Teaching Assistant
+4. Mansi Mohapatra  - VSD Teaching Assistant
 
 
 
