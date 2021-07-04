@@ -2077,7 +2077,8 @@ README.md file for applying synthesis strategy
 ![image](https://user-images.githubusercontent.com/60011091/124363161-4f8f7800-dc57-11eb-91f6-90fcba07b602.png)
 
 
-Setting SYNTH_STRATEGY 1
+Setting SYNTH_STRATEGY 
+
 ![image](https://user-images.githubusercontent.com/60011091/124363182-7483eb00-dc57-11eb-84b7-cdadcff4f8d0.png)
 
 When we set this value as 1 where the area would would increase but the delay will decrease significantly.
@@ -2102,18 +2103,6 @@ Changing synth.tcl and reducing tns and wns
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124377866-f281d980-dccb-11eb-9411-b929459be206.png)
-
-
-
-
-
-
-
-
-
-
-   
-
 
 
 ### Power Aware CTS 
@@ -2207,16 +2196,10 @@ After we introduce this concept,  θ < (T-S) is again changed based on setup unc
  ### Clock tree Routing (H Tree Algorithm)
  
  H Tree Algorithm takes a particular clock route and it claculates the distance from a particular point to all its end points and tries to comment on the midpoint and builds a tree from that midpoint.
- 
 
 
 
-
-
-## Day-5 Final steps for RTL2GDS
-
-
-
+### Lab for Floorplanning and Placement 
 
 Performing initial floorplan 
 
@@ -2300,6 +2283,25 @@ Layout of Detailed placement after Tap_decap
 ![image](https://user-images.githubusercontent.com/60011091/124381911-7a72de00-dce2-11eb-8b67-e24a82696703.png)
 
 
+
+
+
+ 
+
+
+
+
+
+## Day-5 Final steps for RTL2GDS
+
+
+
+
+### Lab for Power Distribution Network, Routing, DRC Check and SPEF Extraction 
+
+
+
+
 PDN Generation 
 
 ![image](https://user-images.githubusercontent.com/60011091/124378326-5ad1ba80-dcce-11eb-9a2c-87d2c2b3ae39.png)
@@ -2364,6 +2366,16 @@ Checking DRC Violations and SPEF Extraction
 ![image](https://user-images.githubusercontent.com/60011091/124382488-59f85300-dce5-11eb-814d-18c49a98ea0a.png)
 
 
+Layout of Routing 
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382680-400b4000-dce6-11eb-8e6a-cf833bfe8f23.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382695-50bbb600-dce6-11eb-9f2a-b07c58766beb.png)
+
+
+![image](https://user-images.githubusercontent.com/60011091/124382711-78ab1980-dce6-11eb-9f89-59f2c9ca5acc.png)
 
 
 
@@ -2395,4 +2407,17 @@ MAGIC SPICE EXPORT
  ![image](https://user-images.githubusercontent.com/60011091/124380665-8b6c2100-dcdb-11eb-8332-edd64c95e6e8.png)
 
 ![image](https://user-images.githubusercontent.com/60011091/124380673-96bf4c80-dcdb-11eb-8461-bd30b84438ae.png)
+
+
+
+
+
+## Acknowledgements
+
+1. Kunal Ghosh - Co-founder(VSD Corp. Pvt. Ltd)
+2. Mili Anand  - VSD Teaching Assistant
+3. Mansi Mohapatra  - VSD Teaching Assistant
+
+
+
 
