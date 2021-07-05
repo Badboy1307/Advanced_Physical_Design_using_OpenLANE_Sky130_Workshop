@@ -44,7 +44,7 @@ Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop c
   * [Lab for Floorplanning and Placement](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Floorplanning-and-Placement)
   
   - [Day-5 Final steps for RTL2GDS](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-5-Final-steps-for-RTL2GDS)
-  * 
+  * [Lab for Power Distribution Network, Routing, DRC Check and SPEF Extraction](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Power-Distribution-Network,-Routing,-DRC-Check-and-SPEF-Extraction)
   * 
 
   
