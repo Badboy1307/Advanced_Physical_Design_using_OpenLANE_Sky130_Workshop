@@ -883,7 +883,7 @@ Die which consist of core is a small semiconductor material specimen on which th
 -Whenever the Utilization Factor=1, the core is fully occupied and we are not allowed to ad any extra cells in our design and the core will take square shaped structure.
 
 
-     Aspect Ration= Height/ Width
+     Aspect Ratio= Height/ Width
        
        
 -Whenever the Aspect Ratio = 1, it signifies that the chip is square shaped. But whenever the Aspect Ratio or Utilization Factor is not 1, then  the chip will take rectangular shaped structure.
