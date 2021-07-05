@@ -10,11 +10,11 @@ Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop c
 ## Day wise Workshop topics 
 
 - [Day-1 Inception of open-source EDA OpenLANE and Sky130 PDK](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-1-Inception-of-open-source-EDA-OpenLANE-and-Sky130-PDK)
-  *  [How to talk to computers](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#How-to-talk-to-computers)
-  * 
-  * 
-  * 
-  * 
+  * [How to talk to computers](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#How-to-talk-to-computers)
+  * [SOC and OpenLane](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#SOC-and-OpenLane)
+  * [Open source EDA tools Lab](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Open-source-EDA-tools-Lab)
+  * [OpenLane Github link](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#OpenLane-Github-link)
+  
 
 
 - [Day-2 Understand importance of good floorplan vs bad floorplan and introduction to library cells](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-2-Understand-importance-of-good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
@@ -142,9 +142,9 @@ The above image shows the Apps or Application Softwares used in our PC. These ap
 The above image shows the flow of Application Software running in Hardware of Computer using System Softwares which consists of OS, Compiler and Assembler.
 
 
-#### SOC and OpenLane
+### SOC and OpenLane
 
-##### SOC Design using OpenLane
+#### SOC Design using OpenLane
 
 This lecture was given by Mohamed Shalan who talked about OpenLane and its features.
 
@@ -460,10 +460,10 @@ This step is done to deal with antenna violations caused during reaction ion etc
 
 
 
-#### Open source EDA tools Lab
+### Open source EDA tools Lab
 
 
-##### OpenLane directory Structure
+#### OpenLane directory Structure
 
 OpenLane is a flow rather than a tool which comprises of many open source EDA tools.
 
@@ -548,7 +548,7 @@ OpenLane is a flow rather than a tool which comprises of many open source EDA to
 
 
 
-##### Preparation of OpenLane
+#### Preparation of OpenLane
 
 
 Interactive flow of OpenLane 
@@ -831,7 +831,7 @@ OPEN STA Timing report
 
 
 
-##### OpenLane Github link 
+### OpenLane Github link 
 
 
 https://github.com/The-OpenROAD-Project/OpenLane
@@ -894,7 +894,7 @@ Die which consist of core is a small semiconductor material specimen on which th
 
 -Automated placement and routing tools places the remaining logic cells in the design onto the chip.
 
-#### Lab for Floorplanning 
+### Lab for Floorplanning 
 
 ##### Running floorplan in OpenLane
 
@@ -1084,7 +1084,7 @@ Opening floorplan using Magic
 
 
 
-##### Placement and Routing 
+### Library Binding and Placement  
 
 
 Libraries are like shelves which can be divided into two sub libraries like one library will have shapes and sizes informations and the other might have delay related informations. 
@@ -1565,7 +1565,7 @@ This image compares two different devices having different W/L ratios. Even thou
 From the image 1st graph had Vm around 0.98V and 2nd one had Vm as 1.25V approximately.
 
 
-#### Lab to git clone vsdstdcell design 
+### Lab to git clone vsdstdcell design 
 
 
 
@@ -1722,7 +1722,7 @@ We apply the same process to P well side but now the mask used will be mask10. T
 
 
 
-#### Lab for Sky130 basic layer and LEF using inverters
+### Lab for Sky130 basic layer and LEF using inverters
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124351059-db80b000-dc15-11eb-86fd-52987d5d287a.png)
@@ -1754,7 +1754,7 @@ The layout will have all the informations from metal layers,vias and all the log
  But LEF reveals only the metal layers without exposing any logical part of the design. For Pnr of the cell we don't need any logic of the cell and all we need to know where are the Pr boundaries. 
  
     
-#### Lab for creating basic std cell layout and extracting spice netlist
+### Lab for creating basic std cell layout and extracting spice netlist
 
 
 
@@ -1823,7 +1823,7 @@ The below images shows the contents of sky130_inv.spice
 
 
 
-#### Lab for creating SPICE final Deck using Sky130 tech
+### Lab for creating SPICE final Deck using Sky130 tech
 
 
 
@@ -1884,9 +1884,6 @@ The below image shows the coordinates when expanded for rise_transition time alo
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124355357-4f2eb700-dc2e-11eb-988a-e78fc12006d7.png)
-
-
-
 
 
 
@@ -2203,17 +2200,20 @@ After we introduce this concept,  θ < (T-S) is again changed based on setup unc
 
 Performing initial floorplan 
 
+    % init_floorplan
 
 ![image](https://user-images.githubusercontent.com/60011091/124375101-ec84fc00-dcbd-11eb-9213-f4c97d8c44c8.png)
 
 IO placement 
+
+    % place_io
 
 ![image](https://user-images.githubusercontent.com/60011091/124375247-e5aab900-dcbe-11eb-9674-b277286d70b7.png)
 
 Running placement on processed Design
 
 
-    $ global_placement_or
+    % global_placement_or
       
 ![image](https://user-images.githubusercontent.com/60011091/124375737-5b178900-dcc1-11eb-804e-bf4df3b1850f.png)
 
@@ -2224,7 +2224,7 @@ Improved Slack after running placement on processed Design
 
 Running placement using RePlace
 
-     $ global_placement
+     % global_placement
      
 ![image](https://user-images.githubusercontent.com/60011091/124376081-dded1380-dcc2-11eb-805a-79a9ef8db1b2.png)
 
@@ -2236,11 +2236,15 @@ Running placement using RePlace
 
 Tap decap using OpenRoad app
 
+      % tap_decap_or
+
 
 ![image](https://user-images.githubusercontent.com/60011091/124376160-3d4b2380-dcc3-11eb-947d-a91064d04110.png)
 
 
 Detailed placement using OpenRoad app 
+
+      % detailed_placement_or
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124376230-931fcb80-dcc3-11eb-92c3-f1b54eb30952.png)
@@ -2249,6 +2253,8 @@ Detailed placement using OpenRoad app
 
 
 Detailed placement using OpenDP 
+
+      % detailed_placement
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124376840-79cc4e80-dcc6-11eb-90a0-480344b8950a.png)
@@ -2265,6 +2271,9 @@ Detailed placement using OpenDP
 
 
 Detailed placement after Tap_decap
+
+
+    % detailed_placement
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124378238-062e3f80-dcce-11eb-9c0e-4ebb757bd42b.png)
@@ -2286,8 +2295,6 @@ Layout of Detailed placement after Tap_decap
 
 
 
- 
-
 
 
 
@@ -2302,7 +2309,9 @@ Layout of Detailed placement after Tap_decap
 
 
 
-PDN Generation 
+#### PDN Generation 
+
+    % gen_pdn
 
 ![image](https://user-images.githubusercontent.com/60011091/124378326-5ad1ba80-dcce-11eb-9a2c-87d2c2b3ae39.png)
 
@@ -2311,13 +2320,15 @@ PDN Generation
 ![image](https://user-images.githubusercontent.com/60011091/124378345-75a42f00-dcce-11eb-9cca-6ffd8840cc60.png)
 
 
-![image](https://user-images.githubusercontent.com/60011091/124382039-0ab12300-dce3-11eb-86ed-5bed26fd629e.png)
 
 
 
 
 
-Running Routing 
+
+#### Running Routing 
+
+    % run_routing
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124382057-1997d580-dce3-11eb-8997-d61c22151ff5.png)
@@ -2360,13 +2371,16 @@ Final total wire lengths after detailed routing
 ![image](https://user-images.githubusercontent.com/60011091/124382459-2c130e80-dce5-11eb-8d3c-d1aa3a1e696d.png)
 
 
-Checking DRC Violations and SPEF Extraction 
+#### Checking DRC Violations and SPEF Extraction 
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124382488-59f85300-dce5-11eb-814d-18c49a98ea0a.png)
 
 
 Layout of Routing 
+
+
+     $ magic -T /home/john/Desktop/work/tools/openlane_working_dir/pdks/sky130libs.tech lef read ../../tmp/merged.lef def read picorv32a.def
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124382680-400b4000-dce6-11eb-8e6a-cf833bfe8f23.png)
@@ -2379,7 +2393,11 @@ Layout of Routing
 
 
 
-Magic command 
+#### Magic commands
+
+-Running magic command 
+
+     % run_magic 
    
    ![image](https://user-images.githubusercontent.com/60011091/124379944-aa68b400-dcd7-11eb-91c1-529e2909fbc3.png)
 
@@ -2387,7 +2405,10 @@ Magic command
 ![image](https://user-images.githubusercontent.com/60011091/124379952-bfddde00-dcd7-11eb-9310-6131c372e89f.png)
 
 
-Magic DRC Check
+-Magic DRC Check
+
+
+     % run_magic_drc
 
 ![image](https://user-images.githubusercontent.com/60011091/124380371-f4529980-dcd9-11eb-8a0f-12035fe271c3.png)
 
@@ -2395,14 +2416,20 @@ Magic DRC Check
 ![image](https://user-images.githubusercontent.com/60011091/124380388-03d1e280-dcda-11eb-92ad-87dd82c7857b.png)
 
 
-MAGIC SPICE EXPORT
+-MAGIC SPICE EXPORT
+
+
+    % run_magic_spice_export
 
 ![image](https://user-images.githubusercontent.com/60011091/124380618-3fb97780-dcdb-11eb-9fcc-71eb988a8ae1.png)
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124380629-4b0ca300-dcdb-11eb-90c7-51e3ac292fd0.png)
 
- MAGIC Antenna Check
+
+ -MAGIC Antenna Check
+ 
+     % run_magic_antenna_check
  
  ![image](https://user-images.githubusercontent.com/60011091/124380665-8b6c2100-dcdb-11eb-8332-edd64c95e6e8.png)
 
