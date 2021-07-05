@@ -28,7 +28,7 @@ Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop c
  - [Day-3 Design and characterize one library cell using Magic Layout tool and ngspice](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-3-Design-and-characterize-one-library-cell-using-Magic-Layout-tool-and-ngspice)
   * [Lab for CMOS inverter ngspice simulations](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-CMOS-inverter-ngspice-simulations)
   * [SPICE Deck creation and simulation for CMOS Inverter](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#SPICE-Deck-creation-and-simulation-for-CMOS-Inverter)
-  * [Lab to git clone vsdstdcell design](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-to git-clone-vsdstdcell-design)
+  * [Lab to git clone vsdstdcell design](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-to-git-clone-vsdstdcell-design)
   *  [Inception of Layout Fabrication process](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Inception-of-Layout-Fabrication-process)
   *  [Lab for Sky130 basic layer and LEF using inverters](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Sky130-basic-layer-and-LEF-using-inverters)
   *  [Lab for creating SPICE final Deck using Sky130 tech](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-creating-SPICE-final-Deck-using-Sky130-tech)
