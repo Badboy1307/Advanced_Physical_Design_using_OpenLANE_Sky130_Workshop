@@ -25,7 +25,7 @@ Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop c
   * [Cell Design Flow](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Cell-Design-Flow)
   * [Timing Threshold Definitions](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Timing-Threshold-Definitions)
   
- - [Day-3 Design and characterize one library cell using Magic Layout tool and ngspice](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-3-Design-and-characterize-one-library-cell-using-Magic-Layout-tool-and-ngspice)
+- [Day-3 Design and characterize one library cell using Magic Layout tool and ngspice](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-3-Design-and-characterize-one-library-cell-using-Magic-Layout-tool-and-ngspice)
   * [Lab for CMOS inverter ngspice simulations](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-CMOS-inverter-ngspice-simulations)
   * [SPICE Deck creation and simulation for CMOS Inverter](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#SPICE-Deck-creation-and-simulation-for-CMOS-Inverter)
   * [Lab to git clone vsdstdcell design](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-to-git-clone-vsdstdcell-design)
@@ -34,18 +34,18 @@ Advanced Physical Design using OpenLANE/Sky130 Workshop is a five day workshop c
   *  [Lab for creating SPICE final Deck using Sky130 tech](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-creating-SPICE-final-Deck-using-Sky130-tech)
 
   
-  - [Day-4 Pre-layout timing analysis and importance of good clock tree](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#DAY-4-Pre-layout-timing-analysis-and-importance-of-good-clock-tree)
-  * [Labs to convert grid info to track info](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Labs-to-convert-grid-info-to-track-info)
-  * [Labs to convert magic layout to std cell LEF](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Labs-to-convert-magic-layout-to-std-cell-LEF)
-  * [Configuring synthesis settings to fix Slack and include vsdinv](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Configuring-synthesis-settings-to-fix-Slack-and-include-vsdinv)
-  * [Power Aware CTS](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Power-Aware-CTS)
-  * [Setup Timing Analysis](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Setup-Timing-Analysis)
-  * [Clock Jitter and uncertainty](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Clock-Jitter-and-uncertainty)
-  * [Lab for Floorplanning and Placement](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Floorplanning-and-Placement)
+- [Day-4 Pre-layout timing analysis and importance of good clock tree](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#DAY-4-Pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+   * [Labs to convert grid info to track info](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Labs-to-convert-grid-info-to-track-info)
+   * [Labs to convert magic layout to std cell LEF](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Labs-to-convert-magic-layout-to-std-cell-LEF)
+   * [Configuring synthesis settings to fix Slack and include vsdinv](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Configuring-synthesis-settings-to-fix-Slack-and-include-vsdinv)
+   * [Power Aware CTS](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Power-Aware-CTS)
+   * [Setup Timing Analysis](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Setup-Timing-Analysis)
+   * [Clock Jitter and uncertainty](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Clock-Jitter-and-uncertainty)
+   * [Lab for Floorplanning and Placement](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Floorplanning-and-Placement)
   
-  - [Day-5 Final steps for RTL2GDS](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-5-Final-steps-for-RTL2GDS)
-  * [Lab for Power Distribution Network Routing DRC Check and SPEF Extraction](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Power-Distribution-Network-Routing-DRC-Check-and-SPEF-Extraction)
-  * 
+ - [Day-5 Final steps for RTL2GDS](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Day-5-Final-steps-for-RTL2GDS)
+   * [Lab for Power Distribution Network Routing DRC Check and SPEF Extraction](https://github.com/Badboy1307/Advanced_Physical_Design_using_OpenLANE_Sky130_Workshop/blob/main/README.md#Lab-for-Power-Distribution-Network-Routing-DRC-Check-and-SPEF-Extraction)
+  
 
   
  
