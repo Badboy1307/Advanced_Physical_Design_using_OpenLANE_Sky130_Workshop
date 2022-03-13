@@ -138,7 +138,9 @@ The above image shows the Apps or Application Softwares used in our PC. These ap
 
 ![image](https://user-images.githubusercontent.com/60011091/123946253-9f9ede00-d9bc-11eb-88bc-de2c3e39308b.png)
 
+The Below Figure shows a block diagram consisting of Application Software, System Software and Hardware blocks. 
 
+![Flow_Workspace](https://user-images.githubusercontent.com/60011091/123964569-2bbb0080-d9d1-11eb-89bb-4908d7a07f44.jpg)
 
 ### SOC and OpenLane
 
@@ -207,12 +209,6 @@ This images shows the Simplified flow from RTL design to GDSII
              else q<=b;
              
              
-             
-             
-![Flow_Workspace](https://user-images.githubusercontent.com/60011091/123964569-2bbb0080-d9d1-11eb-89bb-4908d7a07f44.jpg)
-
-
-
 
 Standard Cells have regular layout. Each has different views/models 
 
