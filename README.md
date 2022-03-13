@@ -140,16 +140,6 @@ The above image shows the Apps or Application Softwares used in our PC. These ap
 
 
 
-
-![image](https://user-images.githubusercontent.com/60011091/124062338-3071ca00-da4e-11eb-990f-7f2a6a185534.png)
-
-
-
-
-
-The above image shows the flow of Application Software running in Hardware of Computer using System Softwares which consists of OS, Compiler and Assembler.
-
-
 ### SOC and OpenLane
 
 #### SOC Design using OpenLane
