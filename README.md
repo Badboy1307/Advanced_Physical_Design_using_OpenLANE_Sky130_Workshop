@@ -658,7 +658,7 @@ sky130_fd_sc_hd_config.tcl for picorv32a
 Preparation of design 
 
 
-      % pacakge require openlane 0.9
+      % package require openlane 0.9
       % prep -design picorv32a
 
 ![image](https://user-images.githubusercontent.com/60011091/124005058-494e9100-d9f6-11eb-8b01-30b771ae1936.png)
@@ -800,7 +800,7 @@ DFF Ratio
 
 
 
-OPEN STA Timing report 
+Open STA Timing report 
 
 ![image](https://user-images.githubusercontent.com/60011091/124009357-1f4b9d80-d9fb-11eb-8864-162977211f83.png)
 
@@ -815,7 +815,6 @@ OPEN STA Timing report
 
 
 ![image](https://user-images.githubusercontent.com/60011091/124009587-6a65b080-d9fb-11eb-9488-fbad688d9eeb.png)
-
 
 
 
