@@ -210,7 +210,7 @@ This images shows the Simplified flow from RTL design to GDSII
              
              
 
-Standard Cells have regular layout. Each has different views/models 
+Standard Cells have regular layout. Each have different views/models 
 
 -Electrical, HDL, SPICE,
 -Layout (Abstracted and Detailed) 
@@ -219,7 +219,7 @@ Standard Cells have regular layout. Each has different views/models
 ###### Floor and Power Planning 
 
 
-Chip Floorplanning - Patitioning the chip die between different system blocks and placing the I/O pads
+Chip Floorplanning - Partitioning the chip die between different system blocks and placing the I/O pads
 
 
 
@@ -354,7 +354,7 @@ It has two modes of operations ie:
 
 -Interactive -> We run individual commands and steps one by one in an ordered fashion without skipping any step so we can do experimentation and get the idea of how our result will look like.
 
-It has the feature of Design Space Exploration where we can find the best set of flow configurations.It has larger number of design examples which ia around 43 designs with best configurations and some more on the way.
+It has the feature of Design Space Exploration where we can find the best set of flow configurations.It has larger number of design examples which is around 43 designs with best configurations and some more on the way.
 
 
 ###### OpenLane Detailed ASIC Flow 
